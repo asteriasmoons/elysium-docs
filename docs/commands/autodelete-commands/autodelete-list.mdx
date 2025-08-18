@@ -1,0 +1,41 @@
+---
+sidebar_position: 2
+---
+
+# /autodelete list 
+
+Display a list of all channels in your server that currently have message autodeletion enabled.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/autodelete list
+```
+:::danger
+Fetches a summary embed showing which channels have active autodelete timers.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/autodelete list
+```
+This will:
+- Show all channels with autodelete enabled
+- Display the delay (in seconds) for each channel
+- Help server admins quickly review or manage auto-clean behavior
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - This command is view-only — it does not change any settings.
+> - Combine it with `/autodelete remove` to disable autodelete for specific channels.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/autodelete set` – Enable autodeletion in a channel
+
+`/autodelete remove` – Remove autodeletion from a channel

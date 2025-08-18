@@ -1,0 +1,47 @@
+---
+sidebar_position: 1
+---
+
+# /reactionrole add
+
+Attach an emoji and a role to an existing reaction role panel. When users react with the emoji, they’ll automatically receive the assigned role.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/reactionrole add <name> <emoji> <role>
+```
+- `<name>` – The name of the reaction role panel to modify.
+- `<emoji>` – The emoji users will click to get the role.
+- `<role>` – The role to assign when the emoji is clicked.
+:::warning
+Reaction roles make it easy for users to self-assign roles based on interests, pronouns, pings, or access.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/reactionrole add colors 💙 @Blue
+```
+This will:
+- Add a 💙 emoji to the colors panel
+- Assign the @Blue role to anyone who reacts with 💙
+- Enable role removal if they unreact (toggle-style)
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - Emoji must be unique within the same panel — no duplicates allowed.
+> - Custom emojis are supported, but they must be from the server or accessible to the bot.
+> - You can add multiple emoji-role pairs to the same panel using this command repeatedly.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/reactionrole create` – Create a new reaction role panel
+
+`/reactionrole remove` – Remove a role from a panel
+
+`/reactionrole delete` – Delete an entire panel

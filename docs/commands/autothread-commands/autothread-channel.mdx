@@ -1,0 +1,43 @@
+---
+sidebar_position: 1
+---
+
+# /autothread channel
+
+Open the autothread configuration menu for your server. From here, you can enable autothreading in specific channels and customize how threads are created when users send messages.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/autothread channel <config>
+```
+- `<config>` – Opens a configuration UI (via dropdown) to choose which channels will automatically create threads.
+:::info
+Autothreads help keep channels clean by creating discussion threads automatically when members send messages.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/autothread channel configure
+```
+This will:
+- Launch an interactive configuration menu
+- Let you select one or more channels to enable autothreading in
+- Save your choices immediately
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - When autothreading is enabled, every new message in the selected channels will spawn a public thread for that message.
+> - If you add one channel and go back to add another, reselect the already configured channel to keep your settings in tact.
+> - You can later edit the embed sent inside each thread using `/autothread edit.`
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/autothread edit` – Customize the embed that appears in the auto-created threads
+
+`/autothread threadname` – Control the naming style of threads

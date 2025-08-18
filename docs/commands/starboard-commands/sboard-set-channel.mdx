@@ -1,0 +1,47 @@
+---
+sidebar_position: 1
+---
+
+# /starboard set-channel
+
+Set the destination channel where all qualifying starboard messages will be posted.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/starboard set-channel <channel>
+```
+- `<channel>` – The text channel where star-worthy messages should appear
+
+:::warning
+Defines the starboard channel where highlighted messages will be sent.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/starboard set-channel #⭐starboard
+```
+This will:
+- Set `#⭐starboard` as the location where starred messages get reposted
+- Ensure users have a central place to view top messages
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - The bot must have permission to view and send messages in the selected channel.
+> - Pair this with `/starboard enable` to activate the feature if it’s not already running.
+> - You can customize the emoji and threshold using other starboard commands.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/starboard enable` – Turn the starboard system on
+
+`/starboard set-emoji` – Choose the emoji used to star messages
+
+`/starboard set-threshold` – Define how many stars a message needs
+
+`/starboard disable` – Turn the starboard system off

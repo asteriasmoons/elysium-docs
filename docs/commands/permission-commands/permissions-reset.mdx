@@ -1,0 +1,46 @@
+---
+sidebar_position: 1
+---
+
+# /permissions reset 
+
+Reset all custom command permission settings for your server. This restores default access rules for all commands.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/permissions reset
+```
+:::info
+This will clear all configured overrides — every command will return to its default access level.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/permissions reset
+```
+This will:
+- Remove any role-based or user-based restrictions you've applied via `/permissions set`
+- Revert all commands to their default permission behavior
+- Apply immediately across all channels
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - This action affects all commands server-wide.
+> - Great for undoing mistakes or when reworking your server’s permission structure.
+> - Admin permission is required to run this command.
+
+:::info
+Eventually this command will have options for which commands you want to reset. Subscribe to my github repo for updates!
+:::
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/permissions set` – Manually configure command access
+
+`/permissions view` – Review all current permissions

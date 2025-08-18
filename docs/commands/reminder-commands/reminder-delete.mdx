@@ -1,0 +1,45 @@
+---
+sidebar_position: 2
+---
+
+# /reminder delete
+
+Delete an existing reminder from your server’s schedule. This will stop it from repeating and remove all its configuration.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/reminder delete <name>
+```
+- `<name>` – The name of the reminder you want to delete.
+:::secondary
+Use this when a reminder is no longer relevant, or you want to clean up your list.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/reminder delete hydration
+```
+This will:
+- Permanently delete the hydration reminder
+- Remove its schedule and configuration
+- Prevent it from posting in the future
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - Reminder names are case-insensitive.
+> - This only affects the reminder — it won’t delete any past messages it posted.
+> - If the name doesn’t match any existing reminder, Pandoryx will let you know.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/reminder list` – See all active reminders
+
+`/reminder create` – Create a new one
+
+`/reminder edit` – Change an existing reminder

@@ -1,0 +1,47 @@
+---
+sidebar_position: 4
+---
+
+# /rolepanel editembed
+
+Edit the embed associated with a role panel. You can update the title, description, and color to better reflect the panel’s purpose or theme.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/rolepanel editembed <name> [title] [description] [color]
+```
+- `<name>` – The name of the role panel you want to edit.
+- `[title]` – (Optional) A new embed title.
+- `[description]` – (Optional) A new embed description.
+- `[color]` – (Optional) HEX code for a new embed color (e.g., `#5865f2`).
+:::success
+Customizing the embed helps users understand what the panel is for and what their role options mean.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/rolepanel editembed pronouns "Choose Your Pronouns" "Select the pronouns that best describe you." #ff99cc
+```
+This will:
+- Update the pronouns panel’s embed with a new title, description, and color
+- You will have to republish the role panel as the existing messages are not updated automatically.
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - This does not re-post the panel — it updates the embed where it already exists.
+> - If no field is provided, nothing changes.
+> - Ideal to run after adding roles to your panel for extra context.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/rolepanel create` – Create a role panel structure
+
+`/rolepanel publish` – Post the panel into a channel
+
+`/rolepanel add-role` – Attach roles with labels to the panel

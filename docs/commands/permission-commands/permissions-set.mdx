@@ -1,0 +1,42 @@
+---
+sidebar_position: 2
+---
+
+# /permissions set 
+
+Manually configure which roles can access specific commands in your server. This allows you to fine-tune command access for moderation, organization, or safety.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/permissions set
+```
+:::info
+This command opens an interactive configuration panel where you can select a specific command, choose who can or cannot use it, and apply those settings immediately
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/permissions set
+```
+This will:
+- Open the command permissions setup interface
+- Let you choose a command (like `/ban` or `/embed create`)
+- Assign role access to that command
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - You must have the Administrator permission to use this command.
+> - Overrides from this menu apply server-wide.
+> - These permissions do not override native Discord slash command permissions — but they do block Pandoryx from responding if the user isn't allowed.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/permissions view` – Review current permission assignments
+
+`/permissions reset` – Clear all permission overrides

@@ -1,0 +1,49 @@
+---
+sidebar_position: 4
+---
+
+# /auto forum-set 
+
+Configure the auto forum panel or starter message for a specific forum. Customize the embed’s appearance, the button label, and the button emoji to match your community’s style and your given purpose.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/auto forum-set <forum> [title] [description] [color] [buttonlabel] [emoji]
+```
+- `<forum>` – The forum channel to configure
+- `[title]` – (Optional) The embed’s title text
+- `[description]` – (Optional) The embed’s description/body text
+- `[color]` – (Optional) The embed color (hex code or common color names)
+- `[buttonlabel]` – (Optional) The text shown on the embed message button
+- `[emoji]` – (Optional) The emoji shown on the embed message button
+:::warning
+Personalize the automated panel/message in a chosen forum.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/auto forum-set #support-forum "Ticket Created" "No longer need help? Click below to lock the thread!" #00bfff "Close Ticket" 📨
+```
+This will:
+- Set up a customized ticket panel in `#support-forum`
+- Use the specified title, description, color, button label, and emoji for the panel/message
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - You can skip any optional fields you don’t want to change.
+> - Useful for branding, clarity, or matching the forum’s purpose.
+> - Only available for forums already added with `/auto forum-add`.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/auto forum-add` – Register a forum for auto message panels
+
+`/auto forum-list` – See which forums have auto panels/messages
+
+`/auto forum-remove` – Remove the auto panel from a forum

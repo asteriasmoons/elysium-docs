@@ -1,0 +1,45 @@
+---
+sidebar_position: 1
+---
+
+# /level profile
+
+View your own or another user’s current level and role-based milestones. This command gives a quick overview of someone's progress in your server’s level system.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/level profile [user]
+```
+- `[user]` – (Optional) The user whose level profile you want to view. If omitted, defaults to you.
+:::danger
+No XP here! Levels are granted directly based on message activity and thresholds — this command shows where someone stands.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/level profile @Jordan
+```
+This will:
+- Show Jordan’s current level
+- Display any milestone roles they’ve earned through the level system
+- Give context for how far along they are in the leveling structure
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - There’s no XP bar — just clean level tracking.
+> - Role rewards are visible if configured with `/level role-add.`
+> - If leveling is disabled or the user hasn’t been active, Pandoryx will let you know.
+
+<hr className="md-divider-gradient" />
+
+🔍 Related Commands
+`/level reset` – Reset a user’s level
+
+`/level role-add` – Attach roles to specific levels
+
+`/level role-list` – View all role-based milestones

@@ -1,0 +1,95 @@
+/**
+ * CSS modules are scoped to this page.
+ */
+
+ /* Centered hero; gradient card is handled by ::before */
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: visible; /* allow the inner card to breathe */
+  background-color: #1b1b1d;
+}
+
+/* Rounded, centered gradient "panel" with blue → purple theme */
+.heroBanner::before {
+  content: '';
+  position: absolute;
+  top: 0; 
+  right: 0; 
+  bottom: 0; 
+  left: 0;
+  max-width: 1180px;
+  margin: 2rem auto;
+  border-radius: 9999px; /* full pill shape */
+  background: linear-gradient(
+    135deg, 
+    #ff8c42,
+    #ff43e9,
+    #6055f7
+   ); /* blue to purple */
+  z-index: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* optional: soft shadow */
+}
+
+/* Keep the actual content above the gradient panel */
+.heroBanner :global(.container) {
+  position: relative;
+  z-index: 1;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+  .heroBanner::before {
+    margin: 1rem auto;
+    border-radius: 2rem; /* softer radius on mobile */
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+/* Pill CTA (primary) */
+.cta {
+  border-radius: 9999px;
+  padding: 0.8rem 1.6rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  background: var(--ifm-color-primary);
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+  background: var(--ifm-color-primary-darker);
+}
+
+/* Outline/secondary pill */
+.secondaryCta {
+  border-radius: 9999px;
+  padding: 0.8rem 1.6rem;
+  font-weight: 600;
+  text-decoration: none;
+  background: transparent;
+  color: var(--ifm-font-color-base);
+  border: 2px solid var(--ifm-color-emphasis-600);
+  transition: transform 0.15s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.secondaryCta:hover {
+  transform: translateY(-1px);
+  background: var(--ifm-color-emphasis-200);
+  border-color: var(--ifm-color-emphasis-800);
+}

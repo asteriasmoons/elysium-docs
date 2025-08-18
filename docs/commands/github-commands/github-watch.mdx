@@ -1,0 +1,43 @@
+---
+sidebar_position: 3
+---
+
+# /github watch 
+
+Start watching a GitHub repository in your server. This allows Pandoryx to send updates to a designated channel whenever there’s new activity (like issues, commits, or releases).
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/github watch <repo link>
+```
+- `<repo link>` – The full GitHub URL for the repository you want to track.
+:::info
+Use this to stay on top of development, bug reports, or contributions — right from Discord.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```
+/github watch https://github.com/your-org/pandoryx-bot
+```
+This will:
+- Add the specified repo to your server's watch list
+- Begin posting GitHub activity in the configured feed channel
+- Automatically deliver updates for common events like commits, issues, and releases
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - Make sure Pandoryx has access to the appropriate channel to send updates.
+> - GitHub links must be in valid format `(https://github.com/owner/repo)`.
+> - To view or stop watching, use `/github list` or `/github unwatch`.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/github list` – View all tracked repos
+
+`/github unwatch` – Stop tracking a repo

@@ -1,0 +1,54 @@
+---
+sidebar_position: 1
+---
+
+# /log config 
+
+Set up the events you want Pandoryx to log in your server. This includes moderation actions, user changes, message events, and more.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/log config
+```
+:::secondary
+This command opens a configuration interface where you can choose which events to log and where to send them.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 🧰 Events You Can Configure
+Depending on your setup, you may be able to log events like:
+- Member joins / leaves
+- Bans, unbans, kicks, timeouts
+- Message edits, deletions, purges
+- Role changes and nickname updates
+- Channel or emoji updates
+
+…and more!
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/log config
+```
+This will:
+- Open an interactive menu
+- Let you select individual event types to track
+- Choose a channel for logs to be sent to
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - You must have Administrator permission to use this command.
+> - Logs will only appear if you've selected events and a destination channel.
+> - You can use `/log disable` later to stop logging specific events.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/log disable` – Turn off specific event logging
+
+`/log view` – View your current logging setup

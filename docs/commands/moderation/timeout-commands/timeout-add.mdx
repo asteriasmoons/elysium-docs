@@ -1,0 +1,48 @@
+---
+sidebar_position: 1
+---
+
+# /timeout add 
+
+Apply a temporary timeout (mute) to a user in your server and log the reason. The user will be unable to send messages, react, or speak for the specified duration.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/timeout add <user> <minutes> <reason>
+```
+- `<user>` – The member you want to time out (mention or select from user menu).
+- `<minutes>` – The duration of the timeout, in minutes.
+- `<reason>` – The reason for applying the timeout. This will be saved in the moderation log.
+
+:::success
+Pandoryx and the command executor must have the Timeout Members permission, and the target must be lower in the role hierarchy.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/timeout add @Troublemaker 60 Spamming links in chat
+```
+This will:
+- Time out the user @Troublemaker for 60 minutes
+- Prevent them from messaging, speaking, or reacting
+- Log the action along with the reason “Spamming links in chat”
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - Minimum timeout duration is 1 minute; maximum is 28 days (40,320 minutes).
+> - Timeout effects are automatically lifted when the time expires — no need to manually remove it.
+> - You can end it early using `/timeout remove.`
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/timeout list` – View all active timeouts
+
+`/timeout remove` – Remove a user’s timeout manually
+
+`/timeout view` – View the full details of a timeout case

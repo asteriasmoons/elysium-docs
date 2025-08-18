@@ -1,0 +1,42 @@
+---
+sidebar_position: 3
+---
+
+# /log view
+
+Display your server’s current logging configuration. This shows which events are being logged and the channel they’re being sent to.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/log view
+```
+:::secondary
+Use this to quickly audit your server’s logging setup and verify that everything is working as expected.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/log view
+```
+This will:
+- List all enabled logging events (e.g. joins, bans, deletions)
+- Show which channel each log is being sent to
+- Let you confirm if anything is missing or misconfigured
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - You must have Administrator permission to use this command.
+> - If no log configuration exists yet, Pandoryx will let you know.
+> - Helpful for troubleshooting or adjusting your setup after changes.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/log config` – Select what to log and where to log it
+
+`/log disable` – Disable specific events from being logged

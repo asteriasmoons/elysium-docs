@@ -1,0 +1,45 @@
+---
+sidebar_position: 2
+---
+
+# /level reset
+
+Reset a specific user’s level back to the starting point. Use this if someone is being re-evaluated, has requested a fresh start, or you're rebalancing levels manually.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/level reset <user>
+```
+- `<user>` – The user whose level you want to reset.
+:::danger
+This is an admin/mod-only command — use it carefully, as it cannot be undone.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/level reset @Jordan
+```
+This will:
+- Set Jordan’s level back to Level 0 (or whatever your server’s baseline is)
+- Remove any milestone roles they earned from leveling
+- Start them fresh in the leveling system
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - This does not remove messages or punish the user in any way — it only resets level tracking.
+> - Role rewards tied to previous levels will also be revoked automatically.
+> - Great for server restructures or user-requested resets.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/level profile` – View current level
+
+`/level role-list` – See all level roles
+
+`/level role-add` – Assign roles at specific levels

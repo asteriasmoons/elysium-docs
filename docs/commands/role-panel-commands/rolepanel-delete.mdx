@@ -1,0 +1,45 @@
+---
+sidebar_position: 3
+---
+
+# /rolepanel delete
+
+Delete an existing role panel and all of its associated configuration. This includes the panel’s roles, embed, and format.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/rolepanel delete <name>
+```
+- `<name>` – The name of the role panel you want to delete.
+:::success
+This is a permanent action — the panel and all roles linked to it will be removed from your configuration.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/rolepanel delete pronouns
+```
+This will:
+- Permanently delete the pronouns role panel
+- Remove all associated roles and visual settings
+- Prevent it from being published or edited again
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - You can recreate the panel using `/rolepanel create` if needed.
+> - This does not remove roles from users who already selected them — it only removes the panel UI.
+> - If the panel was already published, it will become inactive in the channel.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/rolepanel create` – Start a new role panel
+
+`/rolepanel list` – View all existing panels
+
+`/rolepanel editembed` – Tweak the embed layout before publishing

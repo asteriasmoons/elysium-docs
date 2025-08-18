@@ -1,0 +1,63 @@
+---
+sidebar_position: 5
+---
+
+# /messagetags
+
+View a list of dynamic tags/variables you can include in your welcome and leave messages. These tags/variables will be automatically replaced with relevant values when messages are sent.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/messagetags
+```
+
+<hr className="md-divider-gradient" />
+
+:::success
+No input is needed. This command will send a reference message showing all available tags.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/messagetags
+```
+This will:
+- Display a message listing all supported dynamic tags
+- Explain what each tag does and how it will be replaced
+- Help you write more personalized welcome and leave messages
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Supported Tags
+| Tag | Description |
+|----------|---------|
+| `{user}` | Mentions the user |
+| `{username}` | The users user name only |
+| `{userTag}` | Full discord tag |
+| `{userId}` | User ID (e.g. 1234567890) |
+| `{userAvatar}` | Avatar URL |
+| `{server}` | The server name |
+
+:::success
+These tags work in both text messages and embed fields where text is supported.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - Use these tags when setting up messages via `/setwelcome set` and `/setleave set`.
+> - They are replaced at the time the message is triggered — no need to format them manually.
+> - You can mix tags with emojis, Markdown, or embed fields to create engaging messages.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+​`/setwelcome set` – Use tags in welcome messages
+
+​`/setleave set` – Use tags in leave messages
+
+`​/setwelcome test` – Preview tag usage in welcome flow

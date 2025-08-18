@@ -1,0 +1,41 @@
+---
+sidebar_position: 1
+---
+
+# /confession send
+
+Send an anonymous confessions panel to the specified channel. When members interact with it, they’ll be able to submit confessions anonymously via modals.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/confession send <channel>
+```
+- `<channel>` – The channel where you want to post the confessions panel.
+:::success
+Great for community bonding, private venting, or light-hearted secrets — anonymously and safely.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/confession send #confess-here
+```
+This will:
+- Send an interactive panel to #confess-here
+- Let users submit anonymous confessions via a button
+- Automatically post their confession as a bot message once submitted
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - Only the bot sees who submitted the confession — the message posted is anonymous to everyone else.
+> - Be sure to set up confession settings first using `/confession setup.`
+> - If no configuration exists, Pandoryx will use default behavior.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/confession setup` – Configure how confessions are handled and displayed

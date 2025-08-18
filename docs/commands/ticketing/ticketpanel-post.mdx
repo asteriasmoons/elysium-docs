@@ -1,0 +1,47 @@
+---
+sidebar_position: 5
+---
+import Admonition from '@theme/Admonition';
+
+# /ticketpanel post
+
+Post a configured ticket panel into a public channel so users can begin opening tickets. This is how you make a ticket panel usable by your community.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/ticketpanel post <name>
+```
+- `<name>` – The name of the ticket panel you want to post. Must match a panel you’ve already created with `/ticketpanel create.`
+
+:::success
+This command must be used in the channel where you want the panel message to appear.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/ticketpanel post support
+```
+This will:
+- Post the support ticket panel in the current channel
+- Display an embed (if configured) and a button for users to open a private ticket
+- Connect new tickets to your configured staff role and transcript channel (if set)
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - You can run this in multiple channels if you want the same panel available in different places.
+> - If you later update the panel using /ticketpanel edit, you should re-run this command to reflect the changes.
+> - The panel message is persistent — users can open tickets at any time.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/ticketpanel create` – Create a panel to configure
+
+`/ticketpanel edit` – Modify an existing panel
+
+`/ticketpanel list` – See all panels you can post

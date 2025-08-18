@@ -1,0 +1,45 @@
+---
+sidebar_position: 5
+---
+
+# /sticky embed remove
+
+Remove a sticky embed from a specific channel without deleting it from your server’s saved embeds. This stops the embed from re-posting in that channel.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/sticky embed remove <name> <channel>
+```
+- `<name>` – The name of the sticky embed you want to remove.
+- `<channel>` – The channel you want to stop the embed from sticking in.
+:::success
+This command is useful when you want to keep the embed saved but disable it in a specific channel.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/sticky embed remove rules #general
+```
+This will:
+- Stop the rules sticky embed from re-posting in `#general`
+- Keep the embed saved and available to send again elsewhere or later
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - This does not delete the saved embed — only removes it from the specified channel.
+> - You can re-add it at any time using `/sticky embed send.`
+> - If the embed was never posted in that channel, Pandoryx will notify you.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/sticky embed send` – Send or re-send a sticky embed to a channel
+
+`/sticky embed delete` – Permanently delete a sticky embed
+
+`/sticky embed list` – View your saved sticky embeds

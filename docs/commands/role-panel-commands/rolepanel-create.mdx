@@ -1,0 +1,47 @@
+---
+sidebar_position: 2
+---
+
+# /rolepanel create
+
+Create a new role panel using either buttons or a select menu. This panel allows users to assign themselves roles by clicking buttons or choosing from a dropdown.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/rolepanel create <name> <type (button/select)> [select_mode (multi/single)]
+```
+- `<name>` – A name to identify the role panel.
+- `<type>` – Choose button for clickable buttons or select for a dropdown menu.
+- `[select_mode]` – (Optional) multi or single (only applies if type is select).
+:::success
+This command only sets up the structure. Use /rolepanel add-role next to add role choices.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/rolepanel create pronouns select multi
+```
+This will:
+- Create a new role panel named pronouns
+- Use a multi-select dropdown so users can choose more than one role
+- Allow further customization using `/rolepanel add-role` and `/rolepanel editembed`
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - If you choose button, each role will get its own clickable button.
+> - If you choose select, the panel appears as a dropdown. Use multi for multiple role selection, or leave blank (defaults to single) for one at a time.
+> - This does not send the panel into a channel yet — use `/rolepanel publish` for that.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/rolepanel add-role` – Add roles to this panel
+
+`/rolepanel publish` – Post the panel in a channel
+
+`/rolepanel editembed` – Customize the panel’s embed

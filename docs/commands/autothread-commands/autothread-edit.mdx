@@ -1,0 +1,46 @@
+---
+sidebar_position: 2
+---
+
+# /autothread edit
+
+Edit the embed message that is automatically sent inside each newly created thread. You can customize the title, description, and color to guide users in their thread replies.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/autothread edit <embed> <channel> [title] [description] [color]
+```
+- `<embed>` – Prompts you if you want to edit the default embed or not. Sort of useless.
+- `<channel>` – The channel where this configuration should apply.
+- `[title]` – (Optional) Embed title.
+- `[description]` – (Optional) Embed body text.
+- `[color]` – (Optional) HEX code for embed color (e.g., `#2ecc71`).
+:::info
+This embed appears as the first message inside every thread auto-created in the selected channel.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/autothread edit #questions "Thanks for your message!" "Feel free to expand on your post here." #5865f2
+```
+This will:
+- Include a custom title and description
+- Style the embed with the provided HEX color
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - You must set this per channel — each channel can have its own embed if desired.
+> - Embeds help prompt users to respond clearly or follow a format.
+> - If no title, description, or color is provided, defaults will be used.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/autothread channel` – Enable autothread behavior in channels
+
+`/autothread threadname` – Define how threads are named

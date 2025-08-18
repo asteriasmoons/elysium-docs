@@ -1,0 +1,49 @@
+---
+sidebar_position: 1
+---
+
+# /rolepanel add-role
+
+Add a role to an existing role panel. This command supports both button-style and select menu panels, with optional emoji and descriptions for customization.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/rolepanel add-role <name> <role> <label> [emoji] [description]
+```
+- `<name>` – The name of the role panel to add the role to.
+- `<role>` – The Discord role you want users to receive.
+- `<label>` – The button or dropdown label that users will see.
+- `[emoji]` – (Optional) Emoji to appear alongside the label.
+- `[description]` – (Optional) A short description (select menus only).
+:::success
+This command is used after creating a role panel with `/rolepanel create.`
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/rolepanel add-role pronouns @They/Them "They/Them" 🌈 "Choose this if you use they/them pronouns."
+```
+This will:
+- Add the **@They/Them** role to the **pronouns** panel
+- Display the label **“They/Them”** with a 🌈 emoji and description
+- Automatically format it for a select menu
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - Descriptions only appear for select menus, not buttons.
+> - You can add multiple roles to the same panel, each with their own label and emoji.
+> - You must publish the panel with `/rolepanel publish` before users can interact with it.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/rolepanel create` – Make a new button or select role panel
+
+`/rolepanel publish` – Send the panel into a channel
+
+`/rolepanel editembed` – Customize the panel’s embed

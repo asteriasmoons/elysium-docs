@@ -1,0 +1,45 @@
+---
+sidebar_position: 4
+---
+
+# /setleave test
+
+Send a preview of your configured leave message to the target channel. Use this to verify how your embed or text message will look when a user leaves the server.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/setleave test
+```
+
+:::success
+No input is required. This command will simulate a user leaving the server and display the configured leave message.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/setleave test
+```
+This will:
+- Send your currently configured leave message to the selected leave channel
+- Replace tags like `{user}`, `{username}`, and `{server}` with fake data for testing
+- Show both text and embed (if type was set to both)
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - Make sure you’ve already set a leave message using `/setleave set`, or this command won’t do anything.
+> - This is a safe way to test formatting before an actual member leaves.
+> - Dynamic tags are replaced in the preview exactly as they would be during real use.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/setleave set` – Configure your leave message
+
+`/setwelcome test` – Test your welcome message
+
+`/messagetags` – Learn about dynamic message tags

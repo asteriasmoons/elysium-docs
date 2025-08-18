@@ -1,0 +1,42 @@
+---
+sidebar_position: 2
+---
+
+# /autorole remove
+
+Remove a role from your server’s autorole list. After removal, new users will no longer receive this role when they join.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/autorole remove <role>
+```
+- `<role>` – The role you want to stop assigning automatically to new members.
+:::secondary
+Use this when retiring a default role or reworking your server's access system.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/autorole remove @Guest
+```
+This will:
+- Remove the @Guest role from the autorole system
+- Prevent it from being auto-assigned to future members
+- Leave all existing members who already received the role unaffected
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - Removing the role does not unassign it from current members — it just stops future auto-assignment.
+> - If the role isn’t in the autorole list, Pandoryx will let you know.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/autorole add` – Add a new autorole
+
+`/autorole view` – View all active autoroles

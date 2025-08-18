@@ -1,0 +1,50 @@
+---
+sidebar_position: 1
+---
+
+# /setwelcome set
+
+Configure a custom welcome message that will be sent when a new member joins your server. You can use plain text, a saved embed, or both.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/setwelcome set <type> <channel> [embedname] [text]
+```
+- `<type>` – Choose text, embed, or both to define the message format.
+- `<channel>` – The channel where the welcome message should be sent.
+- `[embedname]` – (Optional) The name of a saved embed (created using `/embed create`).
+- `[text]` – (Optional) A plain text message to accompany or replace the embed.
+
+:::success
+Supports message tags like `{user}`, `{username}`, `{server}` for dynamic content. Use `/messagetags` to see all available tags.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/setwelcome set both #welcome welcome_embed "Welcome to {server}, {mention}!"
+```
+This will:
+- Send the `welcome_embed` embed along with the custom text when a new member joins
+- Post the message in the `#welcome channel`
+- Tag the new member and reference the server name dynamically
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - You must have created the embed with /embed create before referencing it here.
+> - If you choose text but don't provide a message, nothing will be sent.
+> - You may also use the tags in your embed as well and they will show up live.
+> - Use `/setwelcome test` to preview the message before it goes live.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/setwelcome test` – Preview your welcome message
+
+`/setleave set` – Set up a leave message
+
+`/messagetags` – See supported message variables

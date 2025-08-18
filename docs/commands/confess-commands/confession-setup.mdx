@@ -1,0 +1,41 @@
+---
+sidebar_position: 2
+---
+
+# /confession setup
+
+Configure your server’s confession settings. This includes setting the target channel for confessions to post in, and optionally customizing the panel’s title.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/confession setup <channel> [title]
+```
+- `<channel>` – The channel where anonymous confessions will be posted.
+- `[title]` – (Optional) A custom title for the confession panel embed.
+:::success
+This command must be run before using `/confession send`, unless you’re okay with default behavior.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/confession setup #confess-here "Your secrets are safe with us 🕊️"
+```
+This will:
+- Set `#confess-here` as the default posting location for all anonymous confessions
+- Apply the custom title “Your secrets are safe with us 🕊️” to the confession panel
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - Only one confession channel can be set per server.
+> - If you skip the `[title]`, Pandoryx will use its default embed message.
+> - Members must have permission to view the target channel in order to see confessions.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/confession send` – Post the interactive confession panel

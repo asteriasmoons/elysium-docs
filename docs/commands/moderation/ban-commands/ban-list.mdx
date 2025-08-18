@@ -1,0 +1,45 @@
+---
+sidebar_position: 2
+---
+
+# /ban list
+
+View a full list of all ban cases that have been logged in your server. This command is part of the Moderation module.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/ban list
+```
+
+:::success
+No additional input is required. This command will return a paginated or scrollable list (depending on your interface) of all recorded bans in the server.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/ban list
+```
+This will:
+- Fetch and display all ban cases currently on file
+- Show each case with an index number, user ID, and reason
+- Allow you to reference specific cases with `/ban view <case>`
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - Ban cases are listed in the order they were created (usually oldest to newest).
+> - You can use the case numbers shown here with `/ban view` or `/ban remove.`
+> - If no cases exist, you’ll receive a message stating that there are no recorded bans yet.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/ban add` – Ban a user and log the action
+
+`/ban view` – View a specific ban case
+
+`/ban remove` – Remove a previously logged ban case

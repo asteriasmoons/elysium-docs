@@ -1,0 +1,46 @@
+---
+sidebar_position: 6
+---
+
+# /sticky embed send
+
+Send a sticky embed to a specific channel and activate it. Once sent, Pandoryx will automatically re-post the embed any time someone sends a message in that channel — keeping it “stuck” at the bottom.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/sticky embed send <name> <channel>
+```
+- `<name>` – The name of the sticky embed you want to send.
+- `<channel>` – The channel where the embed should be activated.
+:::success
+Sticky embeds are ideal for rules, reminders, or ongoing announcements in active channels.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/sticky embed send rules #general
+```
+This will:
+- Post the rules sticky embed into the `#general` channel
+- Re-post the embed automatically when new messages are sent, keeping it visible
+- Run continuously until you remove it with `/sticky embed remove`
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - Only one sticky embed can be active per channel.
+> - If a sticky embed is already active in the selected channel, it will be replaced.
+> - Pandoryx needs Manage Messages and Send Messages permissions in the channel to function correctly.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/sticky embed remove` – Stop a sticky embed in a channel
+
+`/sticky embed edit` – Update the content of a saved sticky embed
+
+`/sticky embed create` – Create a new sticky embed

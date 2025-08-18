@@ -1,0 +1,45 @@
+---
+sidebar_position: 1
+---
+
+# /warn add
+
+Warn a user and log the reason for moderation tracking. The user will automatically receive a DM notifying them of the warning (if DMs are open).
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/warn add <user> <reason>
+```
+- `<user>` – The member you want to warn.
+- `<reason>` – The reason for the warning. This will be logged and visible to moderators, and sent to the user via DM.
+
+:::success
+You must have the proper moderation permissions to issue warnings. Pandoryx must also have permission to send DMs.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/warn add @DisruptiveUser Excessive off-topic messages during an event
+```
+This will:
+- Log a warning against @DisruptiveUser
+- DM the user with the warning reason
+- Save the warning in your server’s moderation records
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - Warnings are numbered per user — the first warning is #1, the second is #2, and so on.
+> - If the user has DMs closed or blocked the bot, they will not receive the DM, but the warning will still be logged.
+> - Use `/warn view` to see a user's warning history, and /warn remove to delete a specific warning.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/warn view` – View a user’s full warning history
+
+`/warn remove` – Remove a specific warning from a user

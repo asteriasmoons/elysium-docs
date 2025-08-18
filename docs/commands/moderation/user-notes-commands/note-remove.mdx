@@ -1,0 +1,44 @@
+---
+sidebar_position: 2
+---
+
+# /note remove
+
+Remove a specific moderation note from a user’s record by referencing its note number.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/note remove <user> <number>
+```
+- `<user>` – The member whose note you want to remove.
+- `<number>` – The note’s number from that user’s note list.
+
+:::success
+This is an admin-only command. You can find note numbers using /note view.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/note remove @SomeUser 2
+```
+This will:
+- Delete note #2 from @SomeUser’s internal note history
+- Return a confirmation once the action is complete
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - Note numbers are specific to each user and reflect the order they were added.
+> - Removing a note will not affect other moderation logs (like warnings or bans).
+> - If the specified note doesn’t exist, Pandoryx will let you know.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/note add` – Add a private note to a user
+
+`/note view` – View all notes recorded for a user

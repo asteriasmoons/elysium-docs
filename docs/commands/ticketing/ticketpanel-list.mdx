@@ -1,0 +1,43 @@
+---
+sidebar_position: 4
+---
+
+# /ticketpanel list
+
+View all ticket panels that are currently configured in your server. This is useful for quickly checking what panels exist and confirming their names.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/ticketpanel list
+```
+:::danger
+No inputs are required. This will pull up a list of all existing ticket panels created via `/ticketpanel create.`
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/ticketpanel list
+```
+This will:
+- Display a list of all ticket panels saved on your server
+- Show each panel’s name and basic configuration details (like linked role or transcript channel, if set)
+- Allow you to copy names for use with other /ticketpanel commands
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - If no panels are set up, Pandoryx will let you know the list is empty.
+> - Use the exact panel name shown in this list with /edit, /post, /delete, etc.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/ticketpanel create` – Create a new ticket panel
+
+`/ticketpanel edit` – Modify a panel
+
+`/ticketpanel delete` – Remove a panel from your server

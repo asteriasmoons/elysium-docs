@@ -1,0 +1,49 @@
+---
+sidebar_position: 1
+---
+
+# /sticky embed create
+
+Create a sticky embed message that will automatically stay visible at the bottom of a channel. Whenever someone sends a new message, Pandoryx will re-post the embed to keep it “stuck.”
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/sticky embed create <name> <title> <description> [color]
+```
+- `<name>` – The name to save the sticky embed under.
+- `<title>` – The title of the embed.
+- `<description>` – The main body text of the embed.
+- `[color]` – (Optional) The embed color in HEX format (e.g., `#7289da`).
+
+:::success
+Sticky messages are ideal for reminders, rules, or pinned info that shouldn’t get buried in chat.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/sticky embed create rules "Server Rules" "Please follow the guidelines listed above." #ffcc00
+```
+This will:
+- Create a sticky embed named rules
+- Store it with the given title, description, and color
+- Allow you to send or manage it using the other sticky commands
+
+<hr className="md-divider-gradient" />
+
+🗃️ Notes
+> - Sticky embeds are stored separately from normal embeds created with `/embed create`.
+> - You’ll need to use `/sticky embed send` to place the sticky embed into a channel.
+> - When active, Pandoryx will automatically re-post the embed to the bottom after other users send messages.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/sticky embed send` – Post the sticky embed into a channel
+
+`/sticky embed edit` – Update the title, description, or color
+
+`/sticky embed list` – View all saved sticky embeds

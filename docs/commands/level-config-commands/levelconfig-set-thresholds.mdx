@@ -1,0 +1,44 @@
+---
+sidebar_position: 2
+---
+
+# /levelconfig set-thresholds
+
+Customize the level thresholds for your server — defining exactly when users level up. This allows you to control the pacing and difficulty of the leveling system.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/levelconfig set-thresholds <thresholds>
+```
+- `<thresholds>` – A comma-separated list of level milestones (e.g., 10,20,35,50,...)
+:::secondary
+The number of values defines how many levels your server will have. Each number represents how many messages it takes to reach that level.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/levelconfig set-thresholds 5,10,15,25,40
+```
+This will:
+- Set Level 1 to require 5 messages
+- Level 2 to require 10 more messages (15 total)
+- Level 3 to require 15 more (30 total), and so on...
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - The values are cumulative — each one adds on top of the previous.
+> - The list must be at least 1 entry long.
+> - The maximum number of levels is currently limited by how many thresholds you provide.
+> - You can reset to default values with `/levelconfig reset-thresholds.`
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/levelconfig view-thresholds` – Check your current leveling curve
+
+`/levelconfig reset-thresholds` – Revert to default pacing

@@ -1,0 +1,46 @@
+---
+sidebar_position: 3
+---
+
+# /timeout remove
+
+Manually remove a timeout from a user before it expires and optionally log a reason for lifting the restriction.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/timeout remove <user> [reason]
+```
+- `<user>` – The member whose timeout you want to remove.
+- `[reason]` – (Optional) A note explaining why the timeout was removed. This will be saved in the moderation log.
+
+:::success
+Both you and Pandoryx must have the Timeout Members permission, and Pandoryx’s role must be higher than the user’s.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/timeout remove @User "Issue resolved – they apologized"
+```
+This will:
+- Immediately end the timeout for @User
+- Log the reason “Issue resolved – they apologized” if provided
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - This command only works on users who are currently timed out.
+> - If no reason is provided, the removal will still be logged, but without context.
+> - You can view the original timeout case with /timeout view.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/timeout add` – Apply a timeout with a reason
+
+`/timeout list` – See all active timeouts
+
+`/timeout view` – View the full details of a timeout case

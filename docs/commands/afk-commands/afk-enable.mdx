@@ -1,0 +1,43 @@
+---
+sidebar_position: 1
+---
+
+# /afk enable
+
+Set yourself as AFK (Away From Keyboard) with a custom message. When someone mentions or replies to you, Pandoryx will let them know you're unavailable and show your message.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/afk enable <message>
+```
+- `<message>` – The custom message that will be shown to others when they ping or reply to you
+:::success
+Enables AFK mode and stores your message to display when others interact with you.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/afk enable Studying for finals — back soon!
+```
+This will:
+- Mark you as AFK in the server
+- Show the message to anyone who mentions or replies to you
+- Keep your status active until manually disabled or cleared (based on settings)
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - Your AFK message can be anything — be informative, playful, or cryptic. It’s up to you.
+> - Your AFK status may auto-clear when you send a message, depending on server config (see `/afk nomessage`).
+> - AFK status is tracked per user and applies server-wide.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/afk disable` – Remove your afk status
+
+`/afk nomessage` – Toggle whether sending a message removes your AFK

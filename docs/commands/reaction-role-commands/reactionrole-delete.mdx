@@ -1,0 +1,45 @@
+---
+sidebar_position: 3
+---
+
+# /reactionrole delete
+
+Permanently delete a reaction role panel, including all linked emoji-role pairs. This action cannot be undone.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/reactionrole delete <name>
+```
+- `<name>` – The name of the reaction role panel you want to delete.
+:::warning
+Use this when a panel is no longer needed or when you're starting over from scratch.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/reactionrole delete colors
+```
+This will:
+- Remove the colors reaction role panel from your server
+- Clear out all emoji-role mappings connected to that panel
+- Disable any active message associated with it
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - This does not remove roles from users who already have them — it just deletes the panel.
+> - After deletion, you’ll need to re-create the panel and re-add roles if needed.
+> - Make sure the panel name is correct to avoid accidental deletion.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/reactionrole create` – Start a new panel
+
+`/reactionrole add` – Attach emoji-role options
+
+`/reactionrole remove` – Remove specific roles without deleting the whole panel

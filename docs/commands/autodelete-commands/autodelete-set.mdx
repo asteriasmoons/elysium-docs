@@ -1,0 +1,45 @@
+---
+sidebar_position: 1
+---
+
+# /autodelete set 
+
+Set a channel to automatically delete messages after a delay. By default, messages will be deleted 10 seconds after being sent, unless a custom delay is provided.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/autodelete set <channel> [delay]
+```
+- `<channel>` – The text channel you want messages to be auto-deleted from
+- `[delay]` – (Optional) Time in seconds before the message is deleted (default is 10 seconds)
+:::danger
+Enables message autodeletion for a specified channel with an optional custom delay.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/autodelete set #spam
+```
+> This will set `#spam` to delete all messages after 10 seconds
+```bash
+/autodelete set #bot-commands 30
+```
+> This will set `#bot-commands` to delete messages after 30 seconds
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - The minimum delay is 10 seconds. Values lower than that will be rounded up.
+> - Useful for temporary channels like spam, venting, or clutter-prone logs.
+> - Only users with appropriate permissions can configure auto-delete channels.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/autodelete list` – View a list of all active auto-delete channels
+
+`/autodelete remove` – Disable autodeletion for a channel

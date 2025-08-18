@@ -1,0 +1,331 @@
+/**
+ * Any CSS included here will be global…
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #5831ce;
+  --ifm-color-primary-dark: #5831ce;
+  --ifm-color-primary-darker: #5831ce;
+  --ifm-color-primary-darkest: #5831ce;
+  --ifm-color-primary-light: #5831ce;
+  --ifm-color-primary-lighter: #5831ce;
+  --ifm-color-primary-lightest: #5831ce;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(39, 39, 43, 0.1);
+
+  /* 🔵 Round both Next/Previous nav cards site-wide */
+  --ifm-pagination-nav-border-radius: 20px;  /* ← added */
+
+  --ifm-button-border-radius: 9999px;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #5831ce;
+  --ifm-color-primary-dark: #5831ce;
+  --ifm-color-primary-darker: #5831ce;
+  --ifm-color-primary-darkest: #5831ce;
+  --ifm-color-primary-light: #5831ce;
+  --ifm-color-primary-lighter: #5831ce;
+  --ifm-color-primary-lightest: #5831ce;
+  --docusaurus-highlighted-code-line-bg: rgba(39, 39, 43, 0.1);
+
+  /* (optional) repeat here if you want a different radius in dark mode
+  --ifm-pagination-nav-border-radius: 14px;
+  */
+}
+
+/* ✅ Fallback for older themes (keeps working even if the var isn’t supported) */
+.pagination-nav__link { border-radius: 20px; }
+
+/* Rounded button style for sidebar items */
+.theme-doc-sidebar-item-link a {
+  display: block;
+  padding: 8px 14px;
+  margin: 4px 0;
+  border-radius: 12px;
+  background-color: #2d3748; /* dark background */
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.theme-doc-sidebar-item-link a:hover {
+  background-color: #5831ce; /* slightly lighter on hover */
+  transform: translateY(-1px);
+}
+
+.theme-doc-sidebar-item-link a.active {
+  background-color: #5831ce; /* highlight active link */
+  color: #fff;
+}
+
+/* your existing row is fine */
+.md-button-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+/* center the text/emoji inside each button */
+.md-button-row .button {
+  display: inline-flex;          /* instead of inline-block */
+  align-items: center;           /* vertical centering */
+  justify-content: center;       /* horizontal centering */
+  line-height: 1;                /* remove extra top/bottom slack */
+  padding: 0.6rem 1.2rem;        /* tweak to taste */
+  border-radius: 9999px;         /* pill (or keep your global var) */
+  font-weight: 600;
+}
+
+/* Vertical stack, NOT stretched */
+.md-button-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  margin: 1rem auto;
+}
+
+.md-button-column .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding: 0.6rem 1.2rem;
+  width: auto;           /* ensure no full-width */
+  font-weight: 600;
+}
+
+.btn-emoji {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  margin-right: 8px;   /* space between emoji and text */
+  font-size: 1.05em;   /* optional: nudge size */
+}
+
+.btn-gradient {
+  background: linear-gradient(135deg, #ff8c42, #ff43e9, #6055f7);
+  color: #fff;
+  border: none;
+}
+.btn-gradient:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+.md-divider {
+  border: 0;
+  height: 2px;
+  background: var(--ifm-color-emphasis-300);
+  margin: 2rem 0;
+  border-radius: 9999px; /* pill-ish line */
+}
+
+.md-divider-gradient {
+  border: 0;
+  height: 3px;
+  margin: 2rem 0;
+  border-radius: 9999px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #ff8c42, /* light blue */
+    #ff43e9, /* pink */
+    #6055f7, /* purple */
+    transparent
+  );
+}
+
+/* ==== TABLE STYLING ==== */
+/* ====================== */
+/* General table styling */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  overflow: hidden; /* makes border radius apply to table body */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Table headers */
+table thead {
+  background-color: var(--ifm-color-primary);
+  color: white;
+}
+
+table th, table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  text-align: left;
+}
+
+/* Remove bottom border for last row */
+table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Hover effect */
+table tbody tr:hover {
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+/* ===========================
+   Pandoryx Callouts (global)
+   =========================== */
+
+/* Base: pill, gradient, white text */
+.alert {
+  --icon-size: 1.4rem;   /* matches your ::before width/height */
+  --icon-left: 1rem;     /* how far from the pill’s edge */
+  --icon-gap: 0.6rem;    /* space between icon and text */
+
+  position: relative;
+  border: none;
+  border-radius: 9999px;               
+  padding-top: 1.15rem;  /* was 1rem */
+  padding-bottom: 1rem;  /* keep bottom padding the same */
+  padding-right: 1.75rem;
+  padding-left: calc(var(--icon-left) + var(--icon-size) + var(--icon-gap));
+  color: #fff;
+  background: linear-gradient(
+    135deg,
+    #ff8c42,
+    #ff43e9,
+    #6055f7
+   ); 
+  box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+
+  /* make the text cursive */
+  font-family: 'Delius', cursive;
+  font-weight: 500; /* You can switch between 400, 500, 600, 700 */
+  letter-spacing: 0.3px; /* Helps readability */
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+/* Make sure text stays readable */
+.alert a { color: #fff; text-decoration: underline; }
+.alert strong, .alert b { color: #fff; }
+.alert code {
+  background: rgba(255,255,255,0.14);
+  color: #fff;
+  border: none;
+}
+
+/* Hide the default admonition icon across theme versions */
+.admonition .admonitionIcon,
+.admonition [class*="admonitionIcon"],
+.alert .admonitionIcon,
+.alert [class*="admonitionIcon"],
+.alert__icon,
+[class*="alert__icon"] {
+  display: none !important;
+}
+
+/* Our custom icon slot */
+.alert::before {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: var(--icon-size);
+  height: var(--icon-size);
+  left: var(--icon-left);
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.25));
+}
+
+/* Use higher specificity + !important to beat theme */
+.alert.alert--success::before       { background-image: url("/img/icons/tip.svg") !important; }
+.alert.alert--secondary::before      { background-image: url("/img/icons/note.svg") !important; }
+.alert.alert--info::before { background-image: url("/img/icons/important.svg") !important; }
+.alert.alert--warning::before   { background-image: url("/img/icons/caution.svg") !important; }
+.alert.alert--danger::before    { background-image: url("/img/icons/danger.svg") !important; }
+
+/* Optional: slightly smaller pill on narrow screens */
+@media (max-width: 600px) {
+  .alert {
+    border-radius: 1.25rem;
+    padding-left: 3rem;
+  }
+}
+
+/* Tighter layout for multi-line callouts */
+.alert {
+  line-height: 1.35;
+}
+
+/* Hover subtle lift */
+.alert:hover {
+  box-shadow: 0 10px 26px rgba(0,0,0,0.22);
+}
+
+/* Hide admonition headings across theme variants */
+.admonition .admonitionHeading,
+.admonition [class*="admonitionHeading"],
+.alert .admonitionHeading,
+.alert [class*="admonitionHeading"],
+.alert__heading,
+[class*="alert__heading"] {
+  display: none !important;
+}
+
+/* Optional: tighten top padding now that the heading is gone */
+.admonition,
+.alert {
+  padding-top: 0.85rem;
+}
+
+/* ==== FROSTED GRADIENT BLOCKQUOTES ==== */
+/* Pandoryx frosted gradient blockquotes (no icon) */
+blockquote {
+  position: relative;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  
+  /* gradient border */
+  border-left: 6px solid transparent;
+  border-image: linear-gradient(180deg, #ff8c42, #ff43e9, #6055f7) 1;
+  
+  /* rounded, frosted background */
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  
+  /* subtle depth */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  
+  /* readable text */
+  color: #fff;
+}
+
+blockquote p {
+  margin: 0;
+}
+
+/* === Banner Images === */
+.doc-banner {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+  margin-bottom: 1rem;
+}
+
+/* Hide footer only on docs pages */
+.docs-wrapper footer.footer {
+  display: none;
+}

@@ -1,0 +1,46 @@
+---
+sidebar_position: 6
+---
+
+# /ticketpanel setrole
+
+Set the staff role that will be pinged whenever a user opens a ticket through a specific panel.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/ticketpanel setrole <name> <role>
+```
+- `<name>` – The name of the ticket panel you want to configure.
+- `<role>` – The role to ping when a new ticket is opened from this panel.
+
+:::success
+Each panel can have its own assigned role. This lets you route different ticket types to different staff teams.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/ticketpanel setrole support @SupportTeam
+```
+This will:
+- Assign the @SupportTeam role to the support panel
+- Ping that role each time a user opens a ticket from the panel
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - You can update the role at any time using the same command.
+> - If no role is set, no one will be pinged on ticket creation (not recommended).
+> - This does not restrict who can see or manage the ticket — it's just for alerts.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/ticketpanel create` – Create a new panel
+
+`/ticketpanel post` – Post the panel to a channel
+
+`/ticketpanel settranscriptchannel` – Configure where transcripts are saved

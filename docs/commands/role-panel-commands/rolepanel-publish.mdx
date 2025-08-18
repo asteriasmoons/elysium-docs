@@ -1,0 +1,46 @@
+---
+sidebar_position: 6
+---
+
+# /rolepanel publish
+
+Send your configured role panel into a specific channel so users can begin selecting their roles. This is the final step in making your role panel live and interactive.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/rolepanel publish <name> <channel>
+```
+- `<name>` – The name of the role panel you want to publish.
+- `<channel>` – The target channel where the panel should be posted.
+:::success
+After publishing, users will be able to interact with your panel and assign themselves roles immediately.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/rolepanel publish pronouns #role-selection
+```
+This will:
+- Post the pronouns panel (buttons or select menu) into `#role-selection`
+- Use the current embed configuration and all attached roles
+- Go live for members to use
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - Make sure you've already created the panel and added roles using `/rolepanel create` and `/rolepanel add-role.`
+> - You can publish the same panel to multiple channels if needed.
+> - If you update the embed using `/rolepanel editembed`, changes will not reflect in the published panel automatically. You must repost.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/rolepanel add-role` – Add roles with custom labels and emojis
+
+`/rolepanel editembed` – Tweak the panel’s embed before posting
+
+`/rolepanel delete` – Remove a panel you no longer need

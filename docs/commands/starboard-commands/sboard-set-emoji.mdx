@@ -1,0 +1,46 @@
+---
+sidebar_position: 3
+---
+
+# /starboard set-emoji
+
+Set which emoji should be used to star messages for the starboard. Can be any standard emoji or a custom server emoji.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/starboard set-emoji <emoji>
+```
+- `<emoji>` – The emoji that will trigger a message to be tracked by the starboard
+:::warning
+Defines the emoji users must react with to star a message.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/starboard set-emoji 🌟
+```
+This will:
+- Use the 🌟 emoji as the required reaction for messages to be tracked by the starboard
+- Only count messages with that specific emoji toward the posting threshold
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - Custom emojis are supported (e.g., `:customstar:`), but the bot must be able to use them.
+> - This emoji must match exactly — users reacting with a different emoji won’t trigger starboard tracking.
+> - It’s best to pick a simple, visible emoji for ease of use.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/starboard enable` – Activate the starboard system
+
+`/starboard set-channel` – Choose where starred messages appear
+
+`/starboard set-threshold` – Adjust how many stars a message needs
+
+`/starboard disable` – Deactivate the starboard

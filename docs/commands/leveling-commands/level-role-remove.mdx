@@ -1,0 +1,44 @@
+---
+sidebar_position: 5
+---
+
+# /level role-remove
+
+Remove a level-based role reward from your server’s leveling system. This unlinks the role from the specified level.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/level role-remove <level>
+```
+- `<level>` – The level milestone you want to remove the role from.
+:::danger
+Use this if you're reworking your role progression or cleaning up outdated roles.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/level role-remove 10
+```
+This will:
+- Remove the role currently assigned to Level 10
+- Prevent users from receiving that role when reaching Level 10 in the future
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - This does not remove the role from users who already earned it. You may want to do a `/level reset` to remove it.
+> - If the level has no associated role, Pandoryx will notify you.
+> - You can reassign a new role using `/level role-add.`
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/level role-add` – Set or change a level’s reward role
+
+`/level role-list` – View all level role milestones
+
+`/level reset` – Clear a user’s level and role progress

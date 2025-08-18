@@ -1,0 +1,47 @@
+---
+sidebar_position: 3
+---
+
+# /sticky embed edit
+
+Edit the title, description, or color of an existing sticky embed without having to recreate it.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/sticky embed edit <name> [title] [description] [color]
+```
+- `<name>` – The name of the sticky embed you want to update.
+- `[title]` – (Optional) A new title for the embed.
+- `[description]` – (Optional) A new description.
+- `[color]` – (Optional) A new HEX color (e.g., `#3498db`).
+
+:::success
+You can update one or all fields at once. Leave any field blank to keep it unchanged.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/sticky embed edit rules "Updated Rules" "Please review the updated server rules." #00ff99
+```
+This will:
+- Update the title, description, and color of the rules sticky embed
+- Save the changes so that future uses of the embed reflect the new content
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - There is no need to resend the sticky if it's already being used in a channel. Just send a message in the channel and the new embed will be posted.
+> - Use  `/sticky embed list` to double-check saved names and content.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/sticky embed create` – Build a new sticky embed
+
+`/sticky embed send` – Post the embed into a channel
+
+`/sticky embed list` – Browse your saved sticky embeds

@@ -1,0 +1,42 @@
+---
+sidebar_position: 1
+---
+
+# /autorole add
+
+Add a role to the list of autoroles. Any time a new member joins the server, Pandoryx will automatically assign them this role.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/autorole add <role>
+```
+- `<role>` – The role you want to automatically assign to new members.
+:::secondary
+This is great for assigning base roles like @Member or granting instant access to intro channels.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/autorole add @Member
+```
+This will:
+- Add the @Member role to your server’s autorole list
+- Automatically apply that role to users when they join your server (if Pandoryx has permissions)
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - Pandoryx must have Manage Roles permission, and its role must be higher than the one it’s assigning.
+> - You can add multiple autoroles using this command repeatedly.
+> - Roles are assigned immediately after a user joins — no interaction required.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/autorole remove` – Remove a role from the autorole list
+
+`/autorole view` – See which autoroles are currently active

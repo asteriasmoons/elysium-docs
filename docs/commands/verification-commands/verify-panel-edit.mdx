@@ -1,0 +1,44 @@
+---
+sidebar_position: 2
+---
+
+# /verify panel_edit
+
+Edit the embed content or button appearance of your existing verification panel. This allows you to update the role's presentation without deleting or recreating the panel.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```
+/verify panel_edit <role> [title] [description] [color] [emoji]
+```
+- `<role>` – The role associated with the existing verification panel.
+- `[title]` – (Optional) New title for the embed.
+- `[description]` – (Optional) Updated embed description.
+- `[color]` – (Optional) New HEX color for the embed.
+- `[emoji]` – (Optional) Emoji to display on the verify button.
+:::success
+This command modifies the content, not the functionality. Users will still click to receive the same role.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```
+/verify panel_edit @Member "Welcome to the server!" "Click to verify and access the rest of the community." #7289da ✅
+```
+This will:
+- Update the verification panel assigned to **@Member**
+- Replace the embed title, description, and color
+- Refresh the button’s emoji if provided
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - This does not repost the panel — it edits the embed and button wherever it's already been posted.
+> - If you want to move the panel to a different channel, you’ll need to manually delete and re-run `/verify panel.`
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/verify panel` – Create a new verification panel

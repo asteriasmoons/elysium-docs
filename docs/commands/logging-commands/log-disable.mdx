@@ -1,0 +1,42 @@
+---
+sidebar_position: 2
+---
+
+# /log disable
+
+Turn off logging for specific events in your server. This helps you fine-tune your logs and avoid cluttering your log channel with unnecessary activity.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Usage
+```bash
+/log disable
+```
+:::secondary
+This command opens a menu where you can select individual log events to disable — such as message deletes, role changes, or member joins.
+:::
+
+<hr className="md-divider-gradient" />
+
+### 📌 Example
+```bash
+/log disable
+```
+This will:
+- Launch a dropdown UI
+- Let you deselect one or more events you no longer want to track
+- Immediately stop logging those specific actions
+
+<hr className="md-divider-gradient" />
+
+### 🗃️ Notes
+> - You must have Administrator permission to use this command.
+> - Disabling an event type stops it from being logged until you re-enable it via `/log config.`
+> - You can re-enable any previously disabled log at any time.
+
+<hr className="md-divider-gradient" />
+
+### 🔍 Related Commands
+`/log config` – Set up which events are logged and where
+
+`/log view` – See which events are currently being logged
