@@ -52,7 +52,7 @@ const config = {
     ({
       image: "img/social-card.jpg",
       navbar: {
-        title: "Pandoryx",
+        title: "Elysium",
         logo: {
           alt: "Your Bot Logo",
           src: "img/logo.png", // replace if you have a logo
@@ -66,7 +66,9 @@ const config = {
             label: "Docs",
           },
           {
-            to: "/announcements", label: "Updates", position: "left"
+            to: "/announcements",
+            label: "Updates",
+            position: "left",
           },
           // Removed Blog
           // Removed GitHub Pages–specific stuff; keep GitHub link if you want
@@ -101,12 +103,12 @@ const config = {
               // Keep/disable GitHub as you prefer
               {
                 label: "GitHub",
-                href: "https://github.com/asteriasmoons/bot-docs",
+                href: "https://github.com/asteriasmoons/elysium-docs",
               },
             ],
           },
         ],
-        copyright: `© ${new Date().getFullYear()} Pandoryx Docs. Built with Docusaurus.`,
+        copyright: `© ${new Date().getFullYear()} Elysium Docs. Built with Docusaurus.`,
       },
 
       prism: {
