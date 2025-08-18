@@ -4,7 +4,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   // === Site identity ===
-  title: "Pandoryx Bot Docs",
+  title: "Elysium Bot Docs",
   tagline: "Clear docs. Happy users.",
   favicon: "img/favicon.ico",
 
