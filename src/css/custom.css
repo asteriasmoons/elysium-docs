@@ -402,3 +402,41 @@ details, details * {
   box-shadow: none;
   background-image: none;
 }
+
+/* Hide native arrow/marker */
+details > summary::-webkit-details-marker,
+details > summary::marker {
+  display: none;
+}
+
+/* Add custom SVG chevron */
+details > summary {
+  position: relative;
+  padding-left: 1.5rem; /* room for icon */
+  cursor: pointer;
+}
+
+/* closed chevron */
+details > summary::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 1rem;
+  height: 1rem;
+  transform: translateY(-50%) rotate(0deg);
+
+  /* use external SVG */
+  -webkit-mask: url("/img/icon.svg") no-repeat center;
+  -webkit-mask-size: contain;
+  mask: url("/img/icon.svg") no-repeat center;
+  mask-size: contain;
+
+  background: linear-gradient(90deg, #ff8c42, #ff43e9, #6055f7);
+  transition: transform 0.2s ease;
+}
+
+/* open chevron (rotate down) */
+details[open] > summary::before {
+  transform: translateY(-50%) rotate(90deg);
+}
