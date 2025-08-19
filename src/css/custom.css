@@ -330,36 +330,45 @@ blockquote p {
   display: none;
 }
 
-/* style <details> wrapper */
+/* Keep details neutral */
 details {
   background: transparent;
   border: none;
   border-radius: 12px;
   padding: .5rem .75rem;
   margin: 1rem 0;
+  box-shadow: none;
 }
 
-/* clickable summary */
+/* Summary should span full width so the divider reaches edge to edge */
 details > summary {
+  display: block;
   cursor: pointer;
   font-weight: 600;
   margin: 0;
-  list-style: none; /* hide default marker */
+  list-style: none;
 }
 
-/* gradient divider under summary when open */
+/* Gradient divider under summary when open */
 details[open] > summary {
-  border-bottom: 3px solid transparent;
-  border-image: linear-gradient(
+  position: relative;
+  padding-bottom: .6rem; /* room for the line */
+  margin-bottom: .75rem;
+}
+details[open] > summary::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 3px;
+  border-radius: 9999px;
+  background: linear-gradient(
     90deg,
     transparent,
     #ff8c42,  /* orange */
     #ff43e9,  /* pink */
     #6055f7,  /* purple */
     transparent
-  ) 1;
-  padding-bottom: .5rem;
-  margin-bottom: .75rem;
+  );
 }
 
 /* make sure no inherited pill styles apply here */
