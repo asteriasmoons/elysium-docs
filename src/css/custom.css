@@ -406,37 +406,37 @@ details, details * {
 /* Hide native arrow/marker */
 details > summary::-webkit-details-marker,
 details > summary::marker {
-  display: none;
+  display: none !important;
 }
 
 /* Add custom SVG chevron */
 details > summary {
-  position: relative;
-  padding-left: 1.5rem; /* room for icon */
-  cursor: pointer;
+  position: relative !important;
+  padding-left: 1.5rem !important; /* room for icon */
+  cursor: pointer !important;
 }
 
 /* closed chevron */
 details > summary::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 1rem;
-  height: 1rem;
-  transform: translateY(-50%) rotate(0deg);
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 50% !important;
+  width: 1rem !important;
+  height: 1rem !important;
+  transform: translateY(-50%) rotate(0deg) !important;
 
-  /* use external SVG */
-  -webkit-mask: url("/img/icon.svg") no-repeat center;
-  -webkit-mask-size: contain;
-  mask: url("/img/icon.svg") no-repeat center;
-  mask-size: contain;
+  /* external SVG mask */
+  -webkit-mask: url("/img/icon.svg") no-repeat center !important;
+  -webkit-mask-size: contain !important;
+  mask: url("/img/icon.svg") no-repeat center !important;
+  mask-size: contain !important;
 
-  background: linear-gradient(90deg, #ff8c42, #ff43e9, #6055f7);
-  transition: transform 0.2s ease;
+  background: linear-gradient(90deg, #ff8c42, #ff43e9, #6055f7) !important;
+  transition: transform 0.2s ease !important;
 }
 
 /* open chevron (rotate down) */
 details[open] > summary::before {
-  transform: translateY(-50%) rotate(90deg);
+  transform: translateY(-50%) rotate(90deg) !important;
 }
