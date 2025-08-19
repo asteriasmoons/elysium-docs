@@ -181,9 +181,8 @@ table tbody tr:hover {
 /* ===========================
    Elysium Callouts (global)
    =========================== */
-
-/* Base: pill, gradient, white text */
-.alert {
+   /* Base: pill, gradient, white text */
+.alert:not(details) {
   --icon-size: 1.4rem;   /* matches your ::before width/height */
   --icon-left: 1rem;     /* how far from the pill’s edge */
   --icon-gap: 0.6rem;    /* space between icon and text */
@@ -206,16 +205,17 @@ table tbody tr:hover {
 
   /* make the text cursive */
   font-family: 'Delius', cursive;
-  font-weight: 500; /* You can switch between 400, 500, 600, 700 */
-  letter-spacing: 0.3px; /* Helps readability */
+  font-weight: 500;
+  letter-spacing: 0.3px;
   font-size: 1.05rem;
   line-height: 1.5;
 }
 
 /* Make sure text stays readable */
-.alert a { color: #fff; text-decoration: underline; }
-.alert strong, .alert b { color: #fff; }
-.alert code {
+.alert:not(details) a { color: #fff; text-decoration: underline; }
+.alert:not(details) strong, 
+.alert:not(details) b { color: #fff; }
+.alert:not(details) code {
   background: rgba(255,255,255,0.14);
   color: #fff;
   border: none;
@@ -224,18 +224,17 @@ table tbody tr:hover {
 /* Hide the default admonition icon across theme versions */
 .admonition .admonitionIcon,
 .admonition [class*="admonitionIcon"],
-.alert .admonitionIcon,
-.alert [class*="admonitionIcon"],
-.alert__icon,
-[class*="alert__icon"] {
+.alert:not(details) .admonitionIcon,
+.alert:not(details) [class*="admonitionIcon"],
+.alert:not(details) .alert__icon,
+.alert:not(details) [class*="alert__icon"] {
   display: none !important;
 }
 
 /* Our custom icon slot */
-.alert::before {
+.alert:not(details)::before {
   content: "";
   position: absolute;
-  left: 1rem;
   top: 50%;
   transform: translateY(-50%);
   width: var(--icon-size);
@@ -247,71 +246,55 @@ table tbody tr:hover {
 }
 
 /* Use higher specificity + !important to beat theme */
-.alert.alert--success::before       { background-image: url("/img/icons/tip.svg") !important; }
-.alert.alert--secondary::before      { background-image: url("/img/icons/note.svg") !important; }
-.alert.alert--info::before { background-image: url("/img/icons/important.svg") !important; }
-.alert.alert--warning::before   { background-image: url("/img/icons/caution.svg") !important; }
-.alert.alert--danger::before    { background-image: url("/img/icons/danger.svg") !important; }
+.alert:not(details).alert--success::before   { background-image: url("/img/icons/tip.svg") !important; }
+.alert:not(details).alert--secondary::before { background-image: url("/img/icons/note.svg") !important; }
+.alert:not(details).alert--info::before      { background-image: url("/img/icons/important.svg") !important; }
+.alert:not(details).alert--warning::before   { background-image: url("/img/icons/caution.svg") !important; }
+.alert:not(details).alert--danger::before    { background-image: url("/img/icons/danger.svg") !important; }
 
 /* Optional: slightly smaller pill on narrow screens */
 @media (max-width: 600px) {
-  .alert {
+  .alert:not(details) {
     border-radius: 1.25rem;
     padding-left: 3rem;
   }
 }
 
 /* Tighter layout for multi-line callouts */
-.alert {
+.alert:not(details) {
   line-height: 1.35;
 }
 
 /* Hover subtle lift */
-.alert:hover {
+.alert:not(details):hover {
   box-shadow: 0 10px 26px rgba(0,0,0,0.22);
 }
 
 /* Hide admonition headings across theme variants */
 .admonition .admonitionHeading,
 .admonition [class*="admonitionHeading"],
-.alert .admonitionHeading,
-.alert [class*="admonitionHeading"],
-.alert__heading,
-[class*="alert__heading"] {
+.alert:not(details) .admonitionHeading,
+.alert:not(details) [class*="admonitionHeading"],
+.alert:not(details) .alert__heading,
+.alert:not(details) [class*="alert__heading"] {
   display: none !important;
 }
 
 /* Optional: tighten top padding now that the heading is gone */
 .admonition,
-.alert {
+.alert:not(details) {
   padding-top: 0.85rem;
 }
 
-/* NEW ALERT/ADMONITION CSS HERE */
-/* If an admonition .alert contains a <details>, switch to a flat box */
-.alert:has(details) {
-  background: rgba(255,255,255,0.06);   /* neutral frosted look */
-  border-radius: 12px;
-  box-shadow: none;
-  border: 1px solid rgba(255,255,255,0.14);
+/* RESET for <details> so they don't pick up .alert styling */
+details.alert {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 12px !important;
+  padding: 0.75rem 1rem !important;
 }
-
-/* Keep your nice gradient divider under the summary */
-.alert:has(details) details > summary {
-  display: block;
-  position: relative;
-  font-weight: 600;
-  padding-bottom: .6rem;
-  margin-bottom: .75rem;
+details.alert::before { display: none !important; 
 }
-.alert:has(details) details > summary::after {
-  content: "";
-  position: absolute;
-  left: 0; right: 0; bottom: 0;
-  height: 3px; border-radius: 9999px;
-  background: linear-gradient(90deg, transparent, #ff8c42, #ff43e9, #6055f7, transparent);
-}
-/* ===== END NEW ALERT/ADMONITION CSS ===== */ 
 
 /* ==== FROSTED GRADIENT BLOCKQUOTES ==== */
 /* Pandoryx frosted gradient blockquotes (no icon) */
