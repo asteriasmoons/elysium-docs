@@ -329,3 +329,41 @@ blockquote p {
 .docs-wrapper footer.footer {
   display: none;
 }
+
+/* style <details> wrapper */
+details {
+  background: transparent;
+  border: none;
+  border-radius: 12px;
+  padding: .5rem .75rem;
+  margin: 1rem 0;
+}
+
+/* clickable summary */
+details > summary {
+  cursor: pointer;
+  font-weight: 600;
+  margin: 0;
+  list-style: none; /* hide default marker */
+}
+
+/* gradient divider under summary when open */
+details[open] > summary {
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(
+    90deg,
+    transparent,
+    #ff8c42,  /* orange */
+    #ff43e9,  /* pink */
+    #6055f7,  /* purple */
+    transparent
+  ) 1;
+  padding-bottom: .5rem;
+  margin-bottom: .75rem;
+}
+
+/* make sure no inherited pill styles apply here */
+details, details * {
+  box-shadow: none;
+  background-image: none;
+}
