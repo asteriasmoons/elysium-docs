@@ -295,6 +295,10 @@ details.alert {
 }
 details.alert::before { display: none !important; 
 }
+/* Docusaurus details divider override */
+.details_b_E {
+  border: none !important;
+}
 
 /* ==== FROSTED GRADIENT BLOCKQUOTES ==== */
 /* Pandoryx frosted gradient blockquotes (no icon) */
