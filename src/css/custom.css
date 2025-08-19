@@ -403,28 +403,29 @@ details, details * {
   background-image: none;
 }
 
-/* Hide native arrow/marker */
+/* ==== DETAILS ICON CSS ==== */ 
+/* Hide the native marker */
 details > summary::-webkit-details-marker,
-details > summary::marker {
-  display: none !important;
-}
+details > summary::marker { display: none !important; }
 
-/* Add custom SVG chevron */
+/* Use inline-flex so the icon and text lay out side-by-side cleanly */
 details > summary {
-  position: relative !important;
-  padding-left: 1.5rem !important; /* room for icon */
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: .5rem !important;         /* space between icon and text */
   cursor: pointer !important;
+  padding: 0 !important;         /* remove old left padding */
+  position: relative !important; /* harmless; can stay */
+  line-height: 1.35;             /* matches your site rhythm */
 }
 
-/* closed chevron */
+/* Icon block (no absolute positioning) */
 details > summary::before {
   content: "" !important;
-  position: absolute !important;
-  left: 0 !important;
-  top: 50% !important;
+  flex: 0 0 1rem !important;     /* fixed icon width */
   width: 1rem !important;
   height: 1rem !important;
-  transform: translateY(-50%) rotate(0deg) !important;
+  transform: rotate(0deg) !important;
 
   /* external SVG mask */
   -webkit-mask: url("/img/icon.svg") no-repeat center !important;
@@ -432,11 +433,12 @@ details > summary::before {
   mask: url("/img/icon.svg") no-repeat center !important;
   mask-size: contain !important;
 
+  /* gradient fill */
   background: linear-gradient(90deg, #ff8c42, #ff43e9, #6055f7) !important;
-  transition: transform 0.2s ease !important;
+  transition: transform .2s ease !important;
 }
 
-/* open chevron (rotate down) */
+/* Rotate icon when open */
 details[open] > summary::before {
-  transform: translateY(-50%) rotate(90deg) !important;
+  transform: rotate(90deg) !important;
 }
