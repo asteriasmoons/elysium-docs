@@ -366,70 +366,52 @@ details {
   box-shadow: none;
 }
 
-/* Gradient divider under summary when open */
+/* BASE summary row (one rule only) */
+details > summary {
+  /* layout */
+  display: flex;              /* put icon + text on one line */
+  align-items: center;
+  gap: 0.5rem;
+  /* behavior/typography */
+  cursor: pointer;
+  font-weight: 600;
+  margin: 0;
+  padding: 0.25rem 0;
+  line-height: 1.4;
+  list-style: none;           /* hide default marker */
+}
+
+/* Hide native marker across browsers */
+details > summary::-webkit-details-marker,
+details > summary::marker { display: none; }
+
+/* Gradient divider when open */
 details[open] > summary {
   position: relative;
-  padding-bottom: .6rem; /* room for the line */
+  padding-bottom: .6rem;
   margin-bottom: .75rem;
 }
 details[open] > summary::after {
   content: "";
-  position: absolute;
-  left: 0; right: 0; bottom: 0;
-  height: 3px;
-  border-radius: 9999px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    #ff8c42,  /* orange */
-    #ff43e9,  /* pink */
-    #6055f7,  /* purple */
-    transparent
-  );
+  position: absolute; left: 0; right: 0; bottom: 0;
+  height: 3px; border-radius: 9999px;
+  background: linear-gradient(90deg, transparent, #ff8c42, #ff43e9, #6055f7, transparent);
 }
 
-/* make sure no inherited pill styles apply here */
-details, details * {
-  box-shadow: none;
-  background-image: none;
-}
-
-/* ==== DETAILS ICON CSS ==== */ 
-/* Hide the native arrow */
-details > summary::-webkit-details-marker,
-details > summary::marker {
-  display: none !important;
-}
-
-/* Summary as flex row */
-details > summary {
-  display: flex !important;
-  align-items: center !important;
-  gap: 0.5rem !important;    /* spacing between icon + text */
-  cursor: pointer !important;
-  font-weight: 600 !important;
-  margin: 0 !important;
-  padding: 0.25rem 0 !important;
-  line-height: 1.4 !important;
-}
-
-/* Custom SVG icon */
+/* SVG icon (masked) */
 details > summary::before {
-  content: "" !important;
-  width: 1rem !important;
-  height: 1rem !important;
-  flex-shrink: 0 !important;
-
-  -webkit-mask: url("/img/icon.svg") no-repeat center !important;
-  -webkit-mask-size: contain !important;
-  mask: url("/img/icon.svg") no-repeat center !important;
-  mask-size: contain !important;
-
-  background: linear-gradient(90deg, #ff8c42, #ff43e9, #6055f7) !important;
-  transition: transform 0.2s ease !important;
+  content: "";
+  width: 1rem; height: 1rem; flex-shrink: 0;
+  -webkit-mask: url("/img/icon.svg") no-repeat center;
+  -webkit-mask-size: contain;
+  mask: url("/img/icon.svg") no-repeat center;
+  mask-size: contain;
+  background: linear-gradient(90deg, #ff8c42, #ff43e9, #6055f7);
+  transition: transform .2s ease;
 }
 
-/* Rotate when open */
-details[open] > summary::before {
-  transform: rotate(90deg) !important;
-}
+/* Rotate icon when open */
+details[open] > summary::before { transform: rotate(90deg); }
+
+/* Safety: prevent any pill styles from leaking in */
+details, details * { box-shadow: none; background-image: none; }
