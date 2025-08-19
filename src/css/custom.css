@@ -381,11 +381,23 @@ details > summary {
   list-style: none;           /* hide default marker */
 }
 
-/* Hide native marker across browsers */
+/* hide the native marker */
 details > summary::-webkit-details-marker,
 details > summary::marker { display: none; }
 
-/* Gradient divider when open */
+/* summary as a single row */
+details > summary {
+  display: flex;
+  align-items: center;
+  gap: .5rem;           /* space between icon and text */
+  cursor: pointer;
+  font-weight: 600;
+  margin: 0;
+  padding: .25rem 0;
+  line-height: 1.4;
+}
+
+/* gradient divider when open (keep your existing look) */
 details[open] > summary {
   position: relative;
   padding-bottom: .6rem;
@@ -398,10 +410,11 @@ details[open] > summary::after {
   background: linear-gradient(90deg, transparent, #ff8c42, #ff43e9, #6055f7, transparent);
 }
 
-/* SVG icon (masked) */
-details > summary::before {
-  content: "";
-  width: 1rem; height: 1rem; flex-shrink: 0;
+/* the SVG icon block (uses your file) */
+.details-icon {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 1rem;              /* never shrink, keeps row tidy */
   -webkit-mask: url("/img/icon.svg") no-repeat center;
   -webkit-mask-size: contain;
   mask: url("/img/icon.svg") no-repeat center;
@@ -410,8 +423,8 @@ details > summary::before {
   transition: transform .2s ease;
 }
 
-/* Rotate icon when open */
-details[open] > summary::before { transform: rotate(90deg); }
+/* rotate when open */
+details[open] > summary .details-icon { transform: rotate(90deg); }
 
 /* Safety: prevent any pill styles from leaking in */
 details, details * { box-shadow: none; background-image: none; }
