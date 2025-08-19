@@ -4,4 +4,259 @@ sidebar_position: 5
 
 # 🖥 Commands Overview
 
-> This is where the commands overview will go.
+Elysium Bot has a wide variety of slash commands to support your reading, wellness, and self-growth journey. This section is your complete reference for every command the bot offers, grouped by category for easy navigation.
+
+<hr className="md-divider-gradient" />
+
+#### Each command page includes:
+- A description of what the command does
+- A breakdown of its options or parameters
+- Example usage
+- Helpful tips or related commands
+
+<hr className="md-divider-gradient" />
+
+## 🔤 Command Format
+When reading command syntax in this documentation:
+
+`< >` means the field is required
+
+`[ ]` means the field is optional
+
+Never type the brackets — just use the command and fill in your values
+
+Example:
+`/giftlist <@user> <book title> <author>`
+✅ `/giftlist @nyx The Hobbit Tolkien`
+
+<hr className="md-divider-gradient" />
+
+## 🗃 Command Categories
+Below, you’ll find each command grouped into its category. Click a category to view all related commands, or jump straight to a specific one.
+:::warning
+Some commands require you to set up channels or permissions first. See the Getting Started page if something isn’t working as expected.
+:::
+
+<hr className="md-divider-gradient" />
+
+## Standalone Commands
+`/help` - Look up information about the bot and the commands the bot has as well as the features and functionality of the bot.
+
+`/report <message>` - Send feedback or bug reports to the developer.
+
+`/giftlist <@user> <book title> <author>` - Send an announcement that you gifted a user with a book from their giftlist that you found with /profile view [user] command.
+
+`/donate` - This command provides a message with a button attached that you can click to take you to the donation page.
+
+`/booksummary <title> [author]` - Get a book summary on a book your thinking about reading.
+
+<hr className="md-divider-gradient" />
+
+## Easter Egg Commands
+`/moon` - Shows the current moon phase and moon wisdom
+
+`/affirmation` - Get a random affirmation from the bot.
+
+`/tarot <one/three>` - Choose a one card or three card spread for a tarot pull.
+
+<hr className="md-divider-gradient" />
+
+## Buddy Reading Commands
+`/buddyread announce <book> <audience> [note]` - Announce you’re reading a specific book and looking for a reading buddy.
+
+`/buddyread announcements` - View all buddy read announcements (any server | global).
+
+`/buddyread delete <id>` - Delete one of your buddy read announcements by id.
+
+`/buddyread dm <message> [book]` - Send a message to your reading buddy after you've been paired.
+
+`/buddyread finish <book>` - Mark a buddy reading session by book as finished for both participants.
+
+`/buddyread leave <book>` - Leave a buddy reading session. Both users are notified.
+
+`/buddyread messages [book]` - Look up your buddy reads DM message history.
+
+`/buddyread pair <id>` - Pair yourself with a reading buddy with the ID from the announcements board.
+
+`/buddyread search <book> [audience]` - Search for a buddy by specific book titles.
+
+`/buddyread sessions` - View all of your buddy reading sessions, active and past.
+
+`/buddyread status [book]` - Show all of your active buddy reads sessions.
+
+<hr className="md-divider-gradient" />
+
+## Channel Commands
+`/channel reset` - Reset the channel the reading sprints are hosted in.
+
+`/channel set gifts <channel mention>` - Set the giftlist channel for announcements.
+
+`/channel set sprints <channel mention>` - Set a channel for sprint events.
+
+`/channel view` - View which channel is the current reading sprint channel.
+
+<hr className="md-divider-gradient" />
+
+## Embed Commands
+`/embed create <name>` - Create a fancy embed message.
+
+`/embed delete <name>` - Delete an existing embed you created.
+
+`/embed edit <name>` - Edit an existing embed message that you created.
+
+`/embed list` - List all server embeds by name.
+
+`/embed send <name>` - Send an embed you created.
+
+`/embed view <name>` - View an embed you created.
+
+<hr className="md-divider-gradient" />
+
+## Habit Commands
+`/habit add` - Get an embed with buttons to add a daily or weekly habit. Once you click the button a modal will come up for you to fill out and submit.
+
+`/habit list` - This command will send you an embed message with a list of your created habits.
+
+`/habit points` - See the point or xp you have racked up completing your daily habits.
+
+`/habit remove <name>` - Remove one of your habits if its no longer needed.
+
+`/habit reschedule <name> <hour> <minute>` - Reschedule a habit for a different time.
+
+`/habit stats <name>` - View your statistics on a specific habit.
+
+<hr className="md-divider-gradient" />
+
+## Book Inventory Commands
+`/inventory addbook <book> <author> <goodreads link>` - Add a book to the Elysium bot inventory (global).
+
+`/inventory bookremove <title> <author>` - Remove a book from the Elysium bot inventory. Permissions for server owners only.
+
+`/inventory listbooks` - View the Elysium bot book inventory (global).
+
+<hr className="md-divider-gradient" />
+
+## Journal Commands
+`/journal add <entry>` - Add an entry to your journal.
+
+`/journal delete <index/number>` - Delete one of your journal entries.
+
+`/journal edit <index or number>` - Edit a journal entry by number.
+
+`/journal list [page]` - See a list of your entries.
+
+`/journal view <index or number>` - View an entire entry by entering its number from the list view.
+
+<hr className="md-divider-gradient" />
+
+## Mood Commands
+`/mood log` - Sends you an embed with two select menus for moods and activities, a button to add a note and another button to log your mood once done.
+
+`/mood remind off` - This command will turn off your mood reminder.
+
+`/mood remind set <hour> <minute> <frequency> [timezone]` - This command will let you set up the mood reminder with your desired hour, minute, frequency and timezone.
+
+`/mood remind status` - Check and see if your reminder is set and on.
+
+`/mood stats [period]` - View your mood statistics for all time or a specific time period.
+
+<hr className="md-divider-gradient" />
+
+## Profile Commands
+`/profile edit [bio] [intention] [affirmation] [current read] [reading goal] [favorite genre] [preferred format] [favorite author]` - Edit one of the fields or some of the fields for your book profile.
+
+`/profile set <bio> <intention> <affirmation> <current read> <reading goal> <favorite genre> <preferred format> <favorite author>` - Set up your book profile.
+
+`/profile view [user]` - View yours or another users' profile.
+
+<hr className="md-divider-gradient" />
+
+## Progress Commands
+`/progress history [user]` - View your reading progress and/or another users reading progress.
+
+`/progress leaderboard` - See everyone’s progress streaks and who’s on top!
+
+`/progress log <book> <progress> [note]` - Log your reading progress on a specific book(s).
+
+`/progress streak` - View your reading progress streaks.
+
+<hr className="md-divider-gradient" />
+
+## Recommendation Commands
+`/recommend genres <genres>` - Set your genre preferences for book recommendations
+
+`/recommend get` - Get a new book recommendation immediately.
+
+`/recommend interval <daily/weekly/monthly>` - Set the frequency of when you receive book recommendations from the bot.
+
+`/recommend language <language>` - Set your language preference for book recommendations.
+
+`/recommend notify <channel or dms>` - Set up where to get your automatic book recs from the bot.
+
+`/recommend set <interval> <genres> <notify> <language>` - Set all your preferences at one time!
+
+`/recommend show` - Show your current book recommendations and preferences.
+
+<hr className="md-divider-gradient" />
+
+## Reminder Commands
+`/reminders channel add <channel>` - Add a designated channel for setting up and/or receiving reading reminders(repeating).
+
+`/reminders channel list` - Lists all of the designated reminder channels set in the server.
+
+`/reminders channel remove` - Remove a channel from being designated for reminders.
+
+`/reminders list` - See a list of all of your reminders.
+
+`/reminders message <index> <text>` - Change a reminders message text by index number. See `/reminders list` for the index.
+
+`/reminders remove <index>` - Remove a reminder by its index number. See `/reminders list` for the index number (if index # = 1 to remove, the reminders list updates to set the others as index #1, #2, etc., see docs).
+
+`/reminders reschedule <index> <hour> <minute>` - Reschedule an existing reminder by its index number to a different hour and/or minute.
+
+`/reminders set <hour> <minute> [text]`- Set a reading reminder or any kind really!.
+
+`/reminders timezone <zone>` - Set your timezone for all your reminders. UseAmerica/Chicago formatting.
+
+<hr className="md-divider-gradient" />
+
+## Review Commands
+`/review add <book> <author> <rating> <review>` - Add a nice little book review.
+
+`/review author <author>` - View reviews by author.
+
+`/review book <book>` - View reviews by book title.
+
+`/review delete <book> <author>` - Delete a review you made.
+
+`/review edit <book> <author> <review> <rating>` - Edit an existing book review you submitted.
+
+`/review list` - List all of the reviews in Elysium bot (global).
+
+`/review view <book>` - View reviews for a book (shortcut).
+
+<hr className="md-divider-gradient" />
+
+## Sprint Commands
+`/sprint end` - Manually end a sprint. Only admins may use this command.
+
+`/sprint finish <ending pages>` - Submit your ending page number before the reading sprint ends to get a score on the leaderboard.
+
+`/sprint join <starting page>` - Join a reading sprint and input your starting page number.
+
+`/sprint leaderboard` - View the reading sprint leaderboard for your server.
+
+`/sprint set role <role mention>` - Set a role to be pinged for reading sprints. Pings 5 minutes prior to sprint end time and at sprint end.
+
+`/sprint start <duration>` - Start a sprint with a duration up to 1 hour.
+
+`/sprint timeleft` - See how much time is left in an active reading sprint.
+
+<hr className="md-divider-gradient" />
+
+## TBR (To Be Read) Commands
+`/tbr add <title> <author> [status]` - Add a book to your tbr (to be read) list with an optional status of ‘tbr’, ‘finished’, or ‘dnf’.
+
+`/tbr list [user]` - View your tbr (to be read) list or another users.
+
+`/tbr remove <title> <author>` - Remove a book from your tbr (to be read) list.
