@@ -179,7 +179,7 @@ table tbody tr:hover {
 }
 
 /* ===========================
-   Pandoryx Callouts (global)
+   Elysium Callouts (global)
    =========================== */
 
 /* Base: pill, gradient, white text */
@@ -286,6 +286,32 @@ table tbody tr:hover {
 .alert {
   padding-top: 0.85rem;
 }
+
+/* NEW ALERT/ADMONITION CSS HERE */
+/* If an admonition .alert contains a <details>, switch to a flat box */
+.alert:has(details) {
+  background: rgba(255,255,255,0.06);   /* neutral frosted look */
+  border-radius: 12px;
+  box-shadow: none;
+  border: 1px solid rgba(255,255,255,0.14);
+}
+
+/* Keep your nice gradient divider under the summary */
+.alert:has(details) details > summary {
+  display: block;
+  position: relative;
+  font-weight: 600;
+  padding-bottom: .6rem;
+  margin-bottom: .75rem;
+}
+.alert:has(details) details > summary::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 3px; border-radius: 9999px;
+  background: linear-gradient(90deg, transparent, #ff8c42, #ff43e9, #6055f7, transparent);
+}
+/* ===== END NEW ALERT/ADMONITION CSS ===== */ 
 
 /* ==== FROSTED GRADIENT BLOCKQUOTES ==== */
 /* Pandoryx frosted gradient blockquotes (no icon) */
