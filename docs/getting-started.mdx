@@ -6,57 +6,128 @@ import Link from '@docusaurus/Link';
 # 🚀 Getting Started
 
 <div className="md-button-row">
-<Link className="button button--lg btn-gradient" href="https://discord.com/oauth2/authorize?client_id=1374790302119759993&permissions=8&integration_type=0&scope=bot+applications.commands">Invite Bot</Link>
+<Link className="button button--lg btn-gradient" href="https://discord.com/oauth2/authorize?client_id=1366843799451467797&permissions=8&integration_type=0&scope=bot+applications.commands">Invite Bot</Link>
 </div>
 
 <hr className="md-divider-gradient" />
 
-Welcome aboard! Whether you're here for moderation, automation, or building beautiful embeds, Pandoryx is designed to be powerful but easy to use.
-This guide will walk you through the essentials so you can get up and running in minutes.
+Welcome to Elysium! This guide will walk you through adding the bot to your server, setting up basic features, and getting comfortable with your first few commands.
 
 <hr className="md-divider-gradient" />
 
-### 🔐 Permissions
-Pandoryx requires Administrator permissions in your server.
-Why? Because it does a lot — managing roles, creating channels, moderating users, building ticket panels, editing messages, and more. Granting full access ensures nothing breaks mid-command.
+## ✨ What You’ll Need
+Before using Elysium, make sure you have:
+- A Discord server (where you have Manage Server permissions)
+- A love for books, growth, or journaling (optional but highly encouraged 🥰)
 
 <hr className="md-divider-gradient" />
 
-### 🛠️ Setup Checklist
-Once you've invited Pandoryx, here's what to do:
-- Create a bot channel (optional but recommended)
-- Set up a #bot-commands channel to keep things organized.
-- Type `/` in any text channel
-This brings up the list of available slash commands.
-- Use the command /help for a list of commands with descriptions and that are clickable.
+## ➕ Invite Elysium to Your Server
+:::success
+Use the button at the top of the page to invite Elysium
+:::
 
-**Test a few basic commands:**
-
-`/warn @user [reason]` – Issue a warning
-
-`/ticketpanel create` – Build an interactive ticket panel
-
-`/embed create` – Start designing a custom embed
-
-Check out the Commands page to explore everything Pandoryx can do.
+Make sure to grant the bot the necessary permissions during the invite flow. It needs:
+  - Send Messages
+  - Embed Links
+  - Use Slash Commands
+  - Manage Messages (for reminders and cleanups)
+  - Add Reactions (for interactive features)
 
 <hr className="md-divider-gradient" />
 
-### ⚙️ Customization & Config
-Pandoryx comes with smart defaults, but also supports server-specific settings (more coming soon!).
-Watch for the dashboard release to customize things visually.
+## 🛠️ Initial Setup Tips
+After inviting Elysium, here are a few helpful things to do right away:
+
+### 🪞 Set Up Your Profile
+Start by introducing yourself to the bot with:
+```bash
+/profile set <bio> <intention> <affirmation> <current read> <reading goal> <favorite genre> <preferred format> <favorite author>
+```
+Or use `/profile edit` to add just a few details at a time!
 
 <hr className="md-divider-gradient" />
 
-### 💬 Still Have Questions?
-If something doesn’t work or you're confused, here’s what to do:
+### 📚 Add a Book to Your Inventory
+If you’re tracking books globally with others:
+```bash
+/inventory addbook <book> <author> <goodreads link>
+```
 
-[**🐞 Report a bug (comment on the thread, don’t open new issues)**](https://github.com/asteriasmoons/pandoryx-bot/issues/1#issue-3166312503)
+<hr className="md-divider-gradient" />
 
-[**💡 Suggest a feature**](https://github.com/asteriasmoons/pandoryx-bot/issues/2#issue-3166322020)
+### 🌱 Create a Habit
+Build a daily or weekly habit tracker:
+```bash
+/habit add
+```
+> This will open a button-based modal to get you started.
 
-[**💬 Join the Elyxia Bots Support Server**](https://discord.gg/jS5eTjhK7R)
+<hr className="md-divider-gradient" />
 
-Ready to explore? Head to the **Commands** page next!
+### 📓 Start a Journal Entry
+Get thoughts out of your head and into a safe space:
+```bash
+/journal add <entry>
+```
+> View them any time with `/journal list`. It will send to your DMs so make sure the bot can message you.
 
-Or check out our [**Troubleshooting**](./troubleshooting) page if something’s acting up.
+<hr className="md-divider-gradient" />
+
+### 😄 Log Your Mood
+Check in with how you’re feeling using:
+```bash
+/mood log
+```
+> Choose a mood, tag an activity, and optionally add a note!
+
+<hr className="md-divider-gradient" />
+
+### 📌 Optional: Set a Channel
+Want sprint announcements or giftlist pings in a specific place?
+Use:
+```bash
+/channel set sprints <channel>
+/channel set gifts <channel>
+```
+
+<hr className="md-divider-gradient" />
+
+### ⏰ Set Up Reminders
+Elysium can send personal reminders for reading, moods, habits, or anything else!
+Try:
+```bash
+/reminders set <hour> <minute> [text]
+```
+> You can also set `/reminders timezone` to make sure it's correct for your location.
+
+<hr className="md-divider-gradient" />
+
+### 🧠 Helpful Tips
+> - Use `/help` to get an embed with an overview of the bot’s features.
+> - Don’t include `< >` or `[ ]` in your commands — just input the values!
+> - All features work in DMs unless noted otherwise (some require server channel setup).
+> - Most commands give you modals, dropdowns, or buttons to guide you.
+
+<hr className="md-divider-gradient" />
+
+### 💬 Still Stuck?
+No worries! Head over to the Troubleshooting section, or use:
+```bash
+/report <your message>
+```
+to send feedback or ask for help directly.
+
+<hr className="md-divider-gradient" />
+
+## 💖 Join the Support Server
+Need help? Want to suggest a feature or just say hi?
+
+You’re warmly invited to join the official Elysium Support Server:
+[**🌐 Join the Support Server**](https://discord.gg/jS5eTjhK7R)
+
+<hr className="md-divider-gradient" />
+
+You're all set to explore!
+
+Start browsing the [**Commands Overview**](./docs/commands-overview) or dive right into your first journal entry, habit, or mood log! 🌼
