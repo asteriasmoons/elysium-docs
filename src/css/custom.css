@@ -366,15 +366,6 @@ details {
   box-shadow: none;
 }
 
-/* Summary should span full width so the divider reaches edge to edge */
-details > summary {
-  display: block;
-  cursor: pointer;
-  font-weight: 600;
-  margin: 0;
-  list-style: none;
-}
-
 /* Gradient divider under summary when open */
 details[open] > summary {
   position: relative;
@@ -404,41 +395,41 @@ details, details * {
 }
 
 /* ==== DETAILS ICON CSS ==== */ 
-/* Hide the native marker */
+/* Hide the native arrow */
 details > summary::-webkit-details-marker,
-details > summary::marker { display: none !important; }
-
-/* Use inline-flex so the icon and text lay out side-by-side cleanly */
-details > summary {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: .5rem !important;         /* space between icon and text */
-  cursor: pointer !important;
-  padding: 0 !important;         /* remove old left padding */
-  position: relative !important; /* harmless; can stay */
-  line-height: 1.35;             /* matches your site rhythm */
+details > summary::marker {
+  display: none !important;
 }
 
-/* Icon block (no absolute positioning) */
+/* Summary as flex row */
+details > summary {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;    /* spacing between icon + text */
+  cursor: pointer !important;
+  font-weight: 600 !important;
+  margin: 0 !important;
+  padding: 0.25rem 0 !important;
+  line-height: 1.4 !important;
+}
+
+/* Custom SVG icon */
 details > summary::before {
   content: "" !important;
-  flex: 0 0 1rem !important;     /* fixed icon width */
   width: 1rem !important;
   height: 1rem !important;
-  transform: rotate(0deg) !important;
+  flex-shrink: 0 !important;
 
-  /* external SVG mask */
   -webkit-mask: url("/img/icon.svg") no-repeat center !important;
   -webkit-mask-size: contain !important;
   mask: url("/img/icon.svg") no-repeat center !important;
   mask-size: contain !important;
 
-  /* gradient fill */
   background: linear-gradient(90deg, #ff8c42, #ff43e9, #6055f7) !important;
-  transition: transform .2s ease !important;
+  transition: transform 0.2s ease !important;
 }
 
-/* Rotate icon when open */
+/* Rotate when open */
 details[open] > summary::before {
   transform: rotate(90deg) !important;
 }
