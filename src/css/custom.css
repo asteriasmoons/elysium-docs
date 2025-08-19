@@ -300,6 +300,19 @@ details.alert::before { display: none !important;
   border: none !important;
 }
 
+/* remove Docusaurus' default summary divider/line, regardless of hashed class */
+details > summary[class*="details_"],
+details > summary[class^="details_"] {
+  border: 0 !important;
+}
+
+/* also neutralize the color var Docusaurus uses for the divider */
+details,
+details[open] {
+  --docusaurus-details-decoration-color: transparent !important;
+  --ifm-alert-border-color: transparent !important; /* belt & suspenders */
+}
+
 /* ==== FROSTED GRADIENT BLOCKQUOTES ==== */
 /* Pandoryx frosted gradient blockquotes (no icon) */
 blockquote {
