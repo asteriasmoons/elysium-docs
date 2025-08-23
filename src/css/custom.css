@@ -493,8 +493,8 @@ details, details * { box-shadow: none; background-image: none; }
   padding: 0.6rem 1.1rem;
   font-weight: 600;
   text-decoration: none;
-  animation: gradientFlow 6s ease infinite;  /* run forever */
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  animation: gradientFlow 3s ease infinite;  /* run forever */
+  transition: transform 0.15s ease, box-shadow 0.15s linear;
 }
 
 /* Hover still gives a lift effect */
