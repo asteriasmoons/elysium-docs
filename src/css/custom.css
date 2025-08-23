@@ -428,3 +428,56 @@ details[open] > summary .details-icon { transform: rotate(90deg); }
 
 /* Safety: prevent any pill styles from leaking in */
 details, details * { box-shadow: none; background-image: none; }
+
+/* ====== START NAV BUTTONS CSS ====== */ 
+/* Scope to your wrapper hook to avoid side effects */
+.pg-gradient .pagination-nav__link {
+  background: linear-gradient(90deg, #ff8c42, #ff43e9, #6055f7);
+  color: #fff;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.6rem 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
+}
+
+/* Make labels/chevrons white too */
+.pg-gradient .pagination-nav__label,
+.pg-gradient .pagination-nav__sublabel {
+  color: #fff;
+}
+
+/* Hover / focus */
+.pg-gradient .pagination-nav__link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+  filter: brightness(1.05);
+}
+.pg-gradient .pagination-nav__link:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(255, 140, 66, 0.55); /* orange halo */
+}
+
+/* Subtle layout polish (optional) */
+.pg-gradient .pagination-nav__item--next .pagination-nav__link,
+.pg-gradient .pagination-nav__item--prev .pagination-nav__link {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+/* If theme applies borders, neutralize them here */
+.pg-gradient .pagination-nav__link {
+  --ifm-link-color: #fff;
+  --ifm-pagination-nav-border-color: transparent;
+  border-color: transparent;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .pg-gradient .pagination-nav__link {
+    transition: none;
+  }
+}
