@@ -13,7 +13,7 @@ const config = {
 
   // === URLs (not using GitHub Pages) ===
   // Use your real domain later (e.g., https://docs.yourdomain.com)
-  url: "http://localhost",
+  url: "https://elysium-docs.vercel.app/",
   baseUrl: "/",
 
   // Link handling
@@ -57,7 +57,7 @@ const config = {
         disableSwitch: false, // ensures toggle is visible
         respectPrefersColorScheme: true, // (optional) follows OS setting
       },
-      
+
       navbar: {
         title: "Elysium",
         logo: {
