@@ -5,7 +5,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 const config = {
   // === Site identity ===
   title: "Elysium Bot Docs",
-  tagline: "Clear docs. Happy users.",
+  tagline: "Track your books, tame your mind, transform your life.",
   favicon: "img/favicon.ico",
 
   // Keep v4 compatibility flag
