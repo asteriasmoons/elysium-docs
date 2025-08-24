@@ -510,3 +510,16 @@ details, details * { box-shadow: none; background-image: none; }
   50%  { background-position: 100% center; }
   100% { background-position: 0% center; }
 }
+
+/* Show only the theme toggle in the right side of the mobile navbar */
+@media (max-width: 996px) {
+  .navbar__items--right {
+    display: flex !important;
+    align-items: center;
+    margin-left: auto;
+    gap: .25rem;
+  }
+  .navbar__items--right > *:not(.theme-toggle) {
+    display: none !important;
+  }
+}

@@ -51,6 +51,13 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       image: "img/social-card.jpg",
+      // 👇 add this block
+      colorMode: {
+        defaultMode: "light", // or 'dark'
+        disableSwitch: false, // ensures toggle is visible
+        respectPrefersColorScheme: true, // (optional) follows OS setting
+      },
+      
       navbar: {
         title: "Elysium",
         logo: {
