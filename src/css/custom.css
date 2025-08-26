@@ -134,13 +134,20 @@
   margin: 2rem 0;
   border-radius: 9999px;
   background: linear-gradient(
-    90deg,
+    135deg,
     transparent,
-    #ff8c42, /* light blue */
-    #ff43e9, /* pink */
-    #6055f7, /* purple */
+    #ff8c42,
+    #ff43e9,
+    #6055f7,
     transparent
   );
+  background-size: 400% auto;
+  animation: dividerWave 8s linear infinite;
+}
+
+@keyframes dividerWave {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
 }
 
 /* ==== TABLE STYLING ==== */
