@@ -530,3 +530,6 @@ details, details * { box-shadow: none; background-image: none; }
     display: none !important;
   }
 }
+
+/* in src/css/custom.css */
+.giscus-wrap { margin-top: 2rem; }
