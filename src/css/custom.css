@@ -288,6 +288,8 @@ table td {
 
   position: relative;
   overflow: hidden;
+  border-left: none !important; 
+  background-clip: padding-box;
   border: 1px solid var(--glass-border-soft);
   border-radius: 18px;
   padding: 1.1rem 1.4rem;
@@ -313,6 +315,18 @@ table td {
   inset: 0;
   background: var(--glass-sheen);
   pointer-events: none;
+
+  border-radius: inherit;  /* THIS stops the leak */
+  z-index: 0;
+}
+
+.alert:not(details)::before {
+  z-index: 2; /* keep your icon on top */
+}
+
+.alert:not(details) > * {
+  position: relative;
+  z-index: 1; /* keep text above sheen */
 }
 
 .alert:not(details):hover {
@@ -436,7 +450,7 @@ details[open] > summary::after {
   content: "";
   position: absolute; left: 0; right: 0; bottom: 0;
   height: 3px; border-radius: 9999px;
-  background: linear-gradient(90deg, transparent, #ff8c42, #ff43e9, #6055f7, transparent);
+  background: linear-gradient(90deg, transparent, #00dbff,#6055f7,#5831ce, transparent);
 }
 
 /* Your icon */
@@ -458,18 +472,19 @@ details[open] > summary .details-icon { transform: rotate(90deg); }
 details, details * { box-shadow: none; background-image: none; }
 
 /* ==========================
-   BLOCKQUOTES (KEEP YOUR LOOK, ADD GLASS SHEEN)
+   BLOCKQUOTES (FLUSH GRADIENT STRIP + GLASS)
    ========================== */
 
 blockquote {
   position: relative;
   overflow: hidden;
 
-  padding: 1rem 1.5rem;
-  margin: 1.5rem 0;
+  /* remove border-image approach */
+  border-left: none;
 
-  border-left: 6px solid transparent;
-  border-image: linear-gradient(180deg, #00dbff, #6055f7, #5831ce) 1;
+  padding: 1rem 1.5rem;
+  padding-left: calc(1.5rem + 6px); /* makes room for the strip */
+  margin: 1.5rem 0;
 
   border-radius: 1rem;
   background: rgba(255, 255, 255, 0.08);
@@ -480,17 +495,39 @@ blockquote {
   color: #fff;
 }
 
+/* the flush gradient strip */
+blockquote::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 6px;
+  background: linear-gradient(180deg, #00dbff, #6055f7, #5831ce);
+
+  /* match the blockquote rounding */
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+/* glass sheen */
 blockquote::after {
   content: "";
   position: absolute;
   inset: 0;
   background: var(--glass-sheen);
   pointer-events: none;
+  border-radius: inherit; /* important */
+}
+
+/* keep content above overlays */
+blockquote > * {
+  position: relative;
+  z-index: 1;
 }
 
 blockquote p {
   margin: 0;
-  position: relative;
 }
 
 /* ==========================
