@@ -34,7 +34,12 @@
   --ifm-color-emphasis-100: rgba(255, 255, 255, 0.08);
 
   /* Shared gradients */
-  --lyst-gradient: linear-gradient(135deg, #ff8c42, #ff43e9, #6055f7);
+  --lyst-gradient: linear-gradient(
+  135deg,
+  #00dbff,
+  #6055f7,
+  #5831ce
+);
 
   /* Glass tokens */
   --glass-bg: rgba(18, 18, 22, 0.62);
@@ -202,7 +207,14 @@ body {
   height: 3px;
   margin: 2rem 0;
   border-radius: 9999px;
-  background: linear-gradient(135deg, transparent, #ff8c42, #ff43e9, #6055f7, transparent);
+  background: linear-gradient(
+  135deg,
+  transparent,
+  #00dbff,
+  #6055f7,
+  #5831ce,
+  transparent
+);
   background-size: 400% auto;
   animation: dividerWave 8s linear infinite;
 }
@@ -277,13 +289,13 @@ table td {
   position: relative;
   overflow: hidden;
   border: 1px solid var(--glass-border-soft);
-  border-radius: 9999px;
-  padding: 0.85rem 1.75rem;
+  border-radius: 18px;
+  padding: 1.1rem 1.4rem;
   padding-left: calc(var(--icon-left) + var(--icon-size) + var(--icon-gap));
 
   color: #fff;
   background: var(--lyst-gradient);
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 
@@ -457,7 +469,7 @@ blockquote {
   margin: 1.5rem 0;
 
   border-left: 6px solid transparent;
-  border-image: linear-gradient(180deg, #ff8c42, #ff43e9, #6055f7) 1;
+  border-image: linear-gradient(180deg, #00dbff, #6055f7, #5831ce) 1;
 
   border-radius: 1rem;
   background: rgba(255, 255, 255, 0.08);
@@ -505,7 +517,7 @@ blockquote p {
   position: relative;
   overflow: hidden;
 
-  background: linear-gradient(90deg, #ff8c42, #ff43e9, #6055f7);
+  background: linear-gradient(90deg, #00dbff, #6055f7, #5831ce);
   background-size: 300% auto;
   animation: gradientFlow 3s ease infinite;
 
