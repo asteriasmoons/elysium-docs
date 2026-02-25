@@ -558,13 +558,7 @@ details, details * { box-shadow: none; background-image: none; }
   --home-gradient-soft: linear-gradient(135deg, rgba(255, 140, 66, 0.35), rgba(255, 67, 233, 0.30), rgba(96, 85, 247, 0.30));
 }
 
-/* Slightly nicer text rendering on the homepage */
-.homepage {
-  -webkit-font-smoothing: antialiased;
-  text-rendering: geometricPrecision;
-}
-
-.homepage .main-wrapper {
+.main-wrapper.homepage {
   background:
     radial-gradient(1200px 700px at 15% 10%, rgba(96, 85, 247, 0.22), transparent 60%),
     radial-gradient(900px 600px at 85% 0%, rgba(255, 67, 233, 0.18), transparent 55%),

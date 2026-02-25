@@ -1,10 +1,9 @@
-import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import Heading from "@theme/Heading";
 
-import styles from "./index.module.css";
+import styles from "./styles.module.css"; // keep this, because it's what your file already uses
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -21,19 +20,9 @@ function HomepageHeader() {
             <p className={styles.subtitle}>{siteConfig.tagline}</p>
 
             <div className={styles.ctaRow}>
-              <Link
-                className={styles.primaryBtn}
-                to="/docs/homepage"
-                aria-label="Read the docs"
-              >
+              <Link className={styles.primaryBtn} to="/docs/homepage">
                 Read Docs
               </Link>
-
-              {/* Optional second button if you want it later:
-              <Link className={styles.secondaryBtn} to="/docs">
-                Browse Docs
-              </Link>
-              */}
             </div>
           </div>
 
@@ -54,15 +43,16 @@ export default function Home() {
   const { siteConfig } = useDocusaurusContext();
 
   return (
-    <Layout title={siteConfig.title} description="Bot documentation">
-      <div className={clsx("homepage", styles.page)}>
+    <Layout
+      title={siteConfig.title}
+      description="Bot documentation"
+      wrapperClassName="homepage" // THIS is the key fix
+    >
+      <main className={styles.page}>
         <div className={styles.container}>
           <HomepageHeader />
         </div>
-
-        {/* Keeping your intent: no features */}
-        <main />
-      </div>
+      </main>
     </Layout>
   );
 }
