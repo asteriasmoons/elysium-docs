@@ -1,95 +1,157 @@
-/**
- * CSS modules are scoped to this page.
- */
+/* ==========================
+   HOME PAGE — YOUR STYLE, BUT GLASSY
+   (No JS changes. Uses your existing hero + button markup.)
+   ========================== */
 
- /* Centered hero; gradient card is handled by ::before */
+/* Full-height, centered hero (keeps footer below fold if content is small) */
 .heroBanner {
-  padding: 4rem 0;
-  text-align: center;
+  min-height: calc(100vh - var(--ifm-navbar-height));
+  display: grid;
+  place-items: center;
+
+  background: transparent !important;
   position: relative;
-  overflow: visible; /* allow the inner card to breathe */
-  background-color: #1b1b1d;
+  overflow: hidden;
+  padding: 2.25rem 0;
 }
 
-/* Rounded, centered gradient "panel" with blue → purple theme */
+/* Subtle dark cosmic glow — not loud */
 .heroBanner::before {
-  content: '';
+  content: "";
   position: absolute;
-  top: 0; 
-  right: 0; 
-  bottom: 0; 
-  left: 0;
-  max-width: 1180px;
-  margin: 2rem auto;
-  border-radius: 9999px; /* full pill shape */
-  background: linear-gradient(
-    135deg, 
-    #ff8c42,
-    #ff43e9,
-    #6055f7
-   ); /* blue to purple */
-  z-index: 0;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* optional: soft shadow */
+  inset: 0;
+  background:
+    radial-gradient(900px 520px at 15% 20%, rgba(128, 0, 254, 0.22), transparent 62%),
+    radial-gradient(820px 520px at 85% 18%, rgba(0, 219, 255, 0.16), transparent 60%),
+    radial-gradient(820px 600px at 60% 90%, rgba(224, 25, 212, 0.14), transparent 62%);
+  pointer-events: none;
 }
 
-/* Keep the actual content above the gradient panel */
+/* The glass card wrapper (Docusaurus hero content lives inside .container) */
 .heroBanner :global(.container) {
   position: relative;
   z-index: 1;
+
+  width: min(980px, calc(100% - 2.25rem));
+  margin: 0 auto;
+
+  border-radius: 26px;
+
+  /* Glass: dark, readable */
+  background: rgba(18, 18, 22, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  /* Soft depth */
+  box-shadow:
+    0 18px 55px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+  padding: 3rem 2.25rem;
+  text-align: left;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
-  .heroBanner::before {
-    margin: 1rem auto;
-    border-radius: 2rem; /* softer radius on mobile */
-  }
+/* A faint sheen so it feels like glass, not a flat rectangle */
+.heroBanner :global(.container)::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.02) 40%,
+    rgba(255, 255, 255, 0.00)
+  );
+  pointer-events: none;
 }
 
+/* Keep content above the sheen */
+.heroBanner :global(.container) > * {
+  position: relative;
+}
+
+/* Title: keep strong, clean, not oversized */
+.heroBanner :global(.hero__title) {
+  margin: 0 0 0.85rem;
+  font-size: clamp(2.1rem, 3.7vw, 3.1rem);
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+}
+
+/* Subtitle: tighter spacing, readable */
+.heroBanner :global(.hero__subtitle) {
+  margin: 0 0 1.4rem;
+  font-size: clamp(1.02rem, 1.45vw, 1.15rem);
+  line-height: 1.6;
+  opacity: 0.92;
+  max-width: 62ch;
+}
+
+/* Button row */
 .buttons {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
+  gap: 0.75rem;
   flex-wrap: wrap;
-  margin-top: 1rem;
 }
 
-/* Pill CTA (primary) */
-.cta {
+/* Your glassy gradient button (keeps Docusaurus button classes) */
+.heroBanner :global(.button.button--secondary) {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background:
+    linear-gradient(135deg, rgba(128, 0, 254, 0.95), rgba(0, 219, 255, 0.85), rgba(224, 25, 212, 0.90));
+  color: #fff;
+
   border-radius: 9999px;
-  padding: 0.8rem 1.6rem;
-  font-weight: 600;
-  text-decoration: none;
-  border: none;
-  background: var(--ifm-color-primary);
-  color: #ffffff;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
-  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+  padding: 0.78rem 1.2rem;
+  font-weight: 800;
+
+  box-shadow:
+    0 14px 30px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.14);
+
+  transition: transform 0.15s ease, filter 0.15s ease, box-shadow 0.15s ease;
 }
 
-.cta:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
-  background: var(--ifm-color-primary-darker);
+.heroBanner :global(.button.button--secondary:hover) {
+  transform: translateY(-2px);
+  filter: brightness(1.07);
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.16);
 }
 
-/* Outline/secondary pill */
-.secondaryCta {
-  border-radius: 9999px;
-  padding: 0.8rem 1.6rem;
-  font-weight: 600;
-  text-decoration: none;
-  background: transparent;
-  color: var(--ifm-font-color-base);
-  border: 2px solid var(--ifm-color-emphasis-600);
-  transition: transform 0.15s ease, background 0.2s ease, border-color 0.2s ease;
+.heroBanner :global(.button.button--secondary:active) {
+  transform: translateY(0);
+  filter: brightness(1.02);
 }
 
-.secondaryCta:hover {
-  transform: translateY(-1px);
-  background: var(--ifm-color-emphasis-200);
-  border-color: var(--ifm-color-emphasis-800);
+/* Optional: if Docusaurus puts extra padding on the hero, clamp it */
+.heroBanner :global(.hero) {
+  padding: 0 !important;
+}
+
+/* Mobile: center text and slightly reduce padding */
+@media (max-width: 996px) {
+  .heroBanner {
+    min-height: auto;
+    padding: 3rem 0;
+  }
+
+  .heroBanner :global(.container) {
+    padding: 2.25rem 1.25rem;
+    text-align: center;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .heroBanner :global(.hero__subtitle) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
