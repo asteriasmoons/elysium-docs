@@ -13,6 +13,16 @@
   margin-top: 0.75rem;
 }
 
+/* Title color */
+.heroBanner :global(.hero__title) {
+  color: #ffffff; /* change this to whatever you want */
+}
+
+/* Subtitle color */
+.heroBanner :global(.hero__subtitle) {
+  color: rgba(255, 255, 255, 0.75); /* softer secondary tone */
+}
+
 .heroInner {
   position: relative;
   border-radius: 28px;
